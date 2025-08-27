@@ -1,0 +1,11 @@
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\bin\Debug\net9.0\Kronos.Machina.Domain.deps.json
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\bin\Debug\net9.0\Kronos.Machina.Domain.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\bin\Debug\net9.0\Kronos.Machina.Domain.pdb
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\Kronos.Machina.Domain.GeneratedMSBuildEditorConfig.editorconfig
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\Kronos.Machina.Domain.AssemblyInfoInputs.cache
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\Kronos.Machina.Domain.AssemblyInfo.cs
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\Kronos.Machina.Domain.csproj.CoreCompileInputs.cache
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\Kronos.Machina.Domain.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\refint\Kronos.Machina.Domain.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\Kronos.Machina.Domain.pdb
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\ref\Kronos.Machina.Domain.dll

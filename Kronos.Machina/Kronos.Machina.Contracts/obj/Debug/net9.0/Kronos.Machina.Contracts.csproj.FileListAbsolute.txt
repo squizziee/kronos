@@ -1,0 +1,12 @@
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\bin\Debug\net9.0\Kronos.Machina.Contracts.deps.json
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\bin\Debug\net9.0\Kronos.Machina.Contracts.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\bin\Debug\net9.0\Kronos.Machina.Contracts.pdb
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\Kronos.Machina.Contracts.csproj.AssemblyReference.cache
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\Kronos.Machina.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\Kronos.Machina.Contracts.AssemblyInfoInputs.cache
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\Kronos.Machina.Contracts.AssemblyInfo.cs
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\Kronos.Machina.Contracts.csproj.CoreCompileInputs.cache
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\Kronos.Machina.Contracts.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\refint\Kronos.Machina.Contracts.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\Kronos.Machina.Contracts.pdb
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\ref\Kronos.Machina.Contracts.dll

@@ -1,0 +1,2 @@
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\wwwroot\favicon.ico
+wwwroot\favicon.ico

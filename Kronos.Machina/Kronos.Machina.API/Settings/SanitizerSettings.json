@@ -1,0 +1,10 @@
+﻿{
+  "VideoTypeSignatures": {
+    "MP4": "AAAAGGZ0eXA=",
+    "M4V": "ZnR5cGlzb20=",
+    "AVI": "UklGRg==",
+    "MOV": "AAAAFGZ0eXBxdCAg",
+    "MPEG": "AAABug==",
+    "MPEG2": "AAABsw=="
+  }
+}

@@ -1,0 +1,15 @@
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\bin\Debug\net9.0\Kronos.Machina.Infrastructure.deps.json
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\bin\Debug\net9.0\Kronos.Machina.Infrastructure.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\bin\Debug\net9.0\Kronos.Machina.Infrastructure.pdb
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\bin\Debug\net9.0\Kronos.Machina.Domain.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\bin\Debug\net9.0\Kronos.Machina.Domain.pdb
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\Kronos.Machina.Infrastructure.csproj.AssemblyReference.cache
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\Kronos.Machina.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\Kronos.Machina.Infrastructure.AssemblyInfoInputs.cache
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\Kronos.Machina.Infrastructure.AssemblyInfo.cs
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\Kronos.Machina.Infrastructure.csproj.CoreCompileInputs.cache
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\Kronos.M.95BD2641.Up2Date
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\Kronos.Machina.Infrastructure.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\refint\Kronos.Machina.Infrastructure.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\Kronos.Machina.Infrastructure.pdb
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\ref\Kronos.Machina.Infrastructure.dll

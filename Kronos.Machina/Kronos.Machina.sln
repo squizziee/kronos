@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kronos.Machina.API", "Kronos.Machina.API\Kronos.Machina.API.csproj", "{A099E922-4594-4AEC-9F9B-DA4626858D07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kronos.Machina.Domain", "Kronos.Machina.Domain\Kronos.Machina.Domain.csproj", "{A4EB56F1-959A-4F80-95E1-CF50194095E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kronos.Machina.Contracts", "Kronos.Machina.Contracts\Kronos.Machina.Contracts.csproj", "{E5B0E80F-EF1B-4C8C-AED1-0E845FADDC2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kronos.Machina.Application", "Kronos.Machina.Application\Kronos.Machina.Application.csproj", "{8905E39D-7723-4F72-B430-D4AC67992E4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kronos.Machina.Infrastructure", "Kronos.Machina.Infrastructure\Kronos.Machina.Infrastructure.csproj", "{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A099E922-4594-4AEC-9F9B-DA4626858D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A099E922-4594-4AEC-9F9B-DA4626858D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A099E922-4594-4AEC-9F9B-DA4626858D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A099E922-4594-4AEC-9F9B-DA4626858D07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4EB56F1-959A-4F80-95E1-CF50194095E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4EB56F1-959A-4F80-95E1-CF50194095E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4EB56F1-959A-4F80-95E1-CF50194095E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4EB56F1-959A-4F80-95E1-CF50194095E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5B0E80F-EF1B-4C8C-AED1-0E845FADDC2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5B0E80F-EF1B-4C8C-AED1-0E845FADDC2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5B0E80F-EF1B-4C8C-AED1-0E845FADDC2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5B0E80F-EF1B-4C8C-AED1-0E845FADDC2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8905E39D-7723-4F72-B430-D4AC67992E4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8905E39D-7723-4F72-B430-D4AC67992E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8905E39D-7723-4F72-B430-D4AC67992E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8905E39D-7723-4F72-B430-D4AC67992E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "Kronos.Machina.API.Controllers.VideoUploadController",
+    "Method": "UploadVideoFile",
+    "RelativePath": "api/video/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Source",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

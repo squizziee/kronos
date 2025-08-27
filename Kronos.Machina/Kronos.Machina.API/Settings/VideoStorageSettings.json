@@ -1,0 +1,18 @@
+﻿{
+  "UnsanitizedZone": {
+    "BlobPath": "blobs"
+  },
+  "SanitizedZone": {
+    "QualityPaths": {
+      "ULD_144p": "_144p",
+      "LD_240p": "_240p",
+      "SD_360p": "_360p",
+      "FSD_480p": "_480p",
+      "HD_720p": "_720p",
+      "FHD_1080p": "_1080p",
+      "QHD_1440p": "_1440p",
+      "UHD_2160p": "_2160p",
+      "FUHD_4320p": "_4320p"
+    }
+  }
+}
