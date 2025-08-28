@@ -3,7 +3,6 @@
     public class BlobData
     {
         public Guid BlobId { get; set; }
-        public Guid BlobId { get; set; }
         public BlobSanitizationState SanitizationState { get; set; }
     }
 }

@@ -6,6 +6,6 @@
     {
         public required string Name { get; set; }
         public required byte[] Signature { get; set; }
-        public required byte[] Extension { get; set; }
+        public required string Extension { get; set; }
     }
 }

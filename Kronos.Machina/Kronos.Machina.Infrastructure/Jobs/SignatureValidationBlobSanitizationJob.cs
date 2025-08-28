@@ -1,8 +1,8 @@
-﻿using Kronos.Machina.Domain.Repositories;
-using Kronos.Machina.Infrastructure.ConfigOptions;
+﻿using Kronos.Machina.Contracts.CommonExceptions;
+using Kronos.Machina.Domain.Entities;
+using Kronos.Machina.Domain.Repositories;
 using Kronos.Machina.Infrastructure.Data.BlobStorage;
 using Kronos.Machina.Infrastructure.Exceptions;
-using Microsoft.Extensions.Options;
 using Quartz;
 
 namespace Kronos.Machina.Infrastructure.Jobs
@@ -14,36 +14,54 @@ namespace Kronos.Machina.Infrastructure.Jobs
     /// The meaning of word <i>"signature"</i> in this case is a series of "magic" 8-bit numbers
     /// (bytes) that are present in every valid video files' header. The way sanitization is 
     /// done is by bytewise signature comparison against supported video formats whose signatures 
-    /// are stored in <c>SanitizerSettings.json</c> file.
+    /// are stored in database and represented by <see cref="IVideoFormatRepository"/> .
     /// </summary>
     public class SignatureValidationBlobSanitizationJob : IJob
     {
-        private readonly VideoTypeSignatures _videoTypeSignatures;
         private readonly IBlobStorage _blobStorage;
         private readonly IVideoDataRepository _videoDataRepository;
+        private readonly IVideoFormatRepository _videoFormatRepository;
 
-        public SignatureValidationBlobSanitizationJob(IOptionsSnapshot<VideoTypeSignatures> options,
-            IBlobStorage blobStorage,
-            IVideoDataRepository videoDataRepository)
+        public SignatureValidationBlobSanitizationJob(IBlobStorage blobStorage,
+            IVideoDataRepository videoDataRepository,
+            IVideoFormatRepository videoFormatRepository)
         {
-            _videoTypeSignatures = options.Value;
             _blobStorage = blobStorage;
             _videoDataRepository = videoDataRepository;
+            _videoFormatRepository = videoFormatRepository;
         }
 
         public async Task Execute(IJobExecutionContext context)
         {
-            var dataMap = context.JobDetail.JobDataMap;
-            var blobIdentifier = dataMap.Get("BlobIdentifier") as IBlobIdentifier;
+            var videoDataStrGuid = context.JobDetail.JobDataMap.GetString("VideoDataId");
 
-            if (blobIdentifier == null) {
-                throw new Exception("No blob identifier provided");
+            if (!Guid.TryParse(videoDataStrGuid, out var videoDataId))
+            {
+                throw new ArgumentException("VideoDataId provided is not a valid Guid");
+            }
+
+            var videoData = await _videoDataRepository.GetVideoDataByIdAsync(videoDataId, 
+                context.CancellationToken);
+
+            if (videoData == null)
+            {
+                throw new ResourceNotFoundException($"No video data with Guid {videoData} was found");
             }
 
             try
             {
-                var blobHeader = await _blobStorage.GetBlobDataAsync(blobIdentifier, 0, 20);
-                var format = CompareHeaders(blobHeader);
+                var blobIdentifier = new DefaultBlobIdentifier(videoData.UploadData.BlobData.BlobId);
+
+                // 20 bytes is enough for any type of suported video file signature
+                var blobHeaderFragment = await _blobStorage.GetBlobDataAsync(blobIdentifier, 0, 20, 
+                    context.CancellationToken);
+
+                var format = await CompareSignaturesAsync(blobHeaderFragment, context.CancellationToken);
+
+                videoData.VideoFormat = format;
+                videoData.UploadData.BlobData.SanitizationState = BlobSanitizationState.SignatureConfirmed;
+
+                await _videoFormatRepository.SaveChangesAsync(context.CancellationToken);
             }
             catch (InvalidSignatureForVideoTypeException ex)
             {
@@ -52,37 +70,46 @@ namespace Kronos.Machina.Infrastructure.Jobs
             }
         }
 
-        private string CompareHeaders(byte[] header)
+        /// <summary>
+        /// Compares header to all known signatures and returns the video type according
+        /// to provided header. Throws if no such signature is supported.
+        /// </summary>
+        /// <param name="header">Header of the file currently being sanitized</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns>Video format based on signature found in provided header.</returns>
+        /// <exception cref="InvalidSignatureForVideoTypeException"></exception>
+        private async Task<VideoFormat> CompareSignaturesAsync(byte[] header, 
+            CancellationToken cancellationToken = default)
         {
-            if (CompareBytewise(header, _videoTypeSignatures.MP4))
+            var formats = await _videoFormatRepository.GetAllVideoFormatsAsync(cancellationToken);
+
+            VideoFormat? actualFormat = null;
+
+            foreach (var format in formats)
             {
-                return "MP4";
-            }
-            else if (CompareBytewise(header, _videoTypeSignatures.M4A))
-            {
-                return "M4A";
-            }
-            else if (CompareBytewise(header, _videoTypeSignatures.AVI))
-            {
-                return "AVI";
-            }
-            else if (CompareBytewise(header, _videoTypeSignatures.MOV))
-            {
-                return "MOV";
-            }
-            else if (CompareBytewise(header, _videoTypeSignatures.MPEG))
-            {
-                return "MPEG";
-            }
-            else if (CompareBytewise(header, _videoTypeSignatures.MPEG2))
-            {
-                return "MPEG";
+                if (CompareBytewise(header, format.Signature)) {
+                    actualFormat = format; 
+                    break;
+                }
             }
 
-            throw new InvalidSignatureForVideoTypeException("Not a video header");
+            if (actualFormat == null)
+            {
+                throw new InvalidSignatureForVideoTypeException("Not a video header");
+            }
+
+            return actualFormat;
         }
 
-        private bool CompareBytewise(byte[] actualBytes, byte[] formatSignature)
+        /// <summary>
+        /// Compares header to signature byte by byte.
+        /// </summary>
+        /// <param name="actualBytes">Provided header. Needs to be sufficient size (equal or bigger than
+        /// the biggest signature supported).</param>
+        /// <param name="formatSignature">Valid format signature.</param>
+        /// <returns><c>True</c> if signature was found inside the provided header, <c>False</c>
+        /// otherwise.</returns>
+        private static bool CompareBytewise(byte[] actualBytes, byte[] formatSignature)
         {
             if (formatSignature.Length > actualBytes.Length)
             {
