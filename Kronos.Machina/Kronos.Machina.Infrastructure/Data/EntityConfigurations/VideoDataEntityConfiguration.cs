@@ -21,7 +21,15 @@ namespace Kronos.Machina.Infrastructure.Data.EntityConfigurations
                 );
 
             builder
-                .OwnsOne(vd => vd.UploadData, builder => builder.OwnsOne(ud => ud.BlobData));
+                .OwnsOne(
+                    vd => vd.UploadData, 
+                    builder => builder.OwnsOne(
+                        ud => ud.BlobData, 
+                        builder => builder.OwnsOne(
+                            bd => bd.SanitizationData
+                        )
+                    )
+                );
         }
     }
 }

@@ -1,7 +1,9 @@
 ﻿namespace Kronos.Machina.Domain.Entities
 {
-    // TODO
-    // Add repository for this entity
+    /// <summary>
+    /// Stores supported video format data, used mostly
+    /// for sanitization purposes.
+    /// </summary>
     public class VideoFormat : BaseEntity
     {
         public required string Name { get; set; }

@@ -4,7 +4,7 @@ namespace Kronos.Machina.Application.Services
 {
     public interface IBackgroundJobScheduler
     {
-        Task<string> ScheduleSanitization(VideoUploadData uploadData, 
-            CancellationToken cancellationToken);
+        Task<string> ScheduleSignatureValidationAsync(VideoData videoData, 
+            CancellationToken cancellationToken = default);
     }
 }

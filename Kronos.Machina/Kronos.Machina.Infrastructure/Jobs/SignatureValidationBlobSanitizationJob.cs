@@ -7,8 +7,6 @@ using Quartz;
 
 namespace Kronos.Machina.Infrastructure.Jobs
 {
-    // TODO 
-    // store formats in database
     /// <summary>
     /// The purpose of this sanitization step is to verify the magic numbers in file headers.
     /// The meaning of word <i>"signature"</i> in this case is a series of "magic" 8-bit numbers

@@ -1,6 +1,7 @@
 ﻿using Kronos.Machina.Application.Services;
 using Kronos.Machina.Contracts.Commands;
 using Kronos.Machina.Domain.Entities;
+using Kronos.Machina.Domain.Misc.Sanitization;
 using Kronos.Machina.Domain.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -11,18 +12,18 @@ namespace Kronos.Machina.Application.Handlers
     {
         private readonly IVideoDataRepository _videoDataRepository;
         private readonly IVideoBlobService _videoBlobService;
-        private readonly IBackgroundJobScheduler _scheduler;
+        private readonly IBlobSanitizationOrchestrator _orchestrator;
         private readonly ILogger<UploadVideoCommandHandler> _logger;
 
 
         public UploadVideoCommandHandler(IVideoDataRepository videoDataRepository,
             IVideoBlobService videoBlobService,
-            IBackgroundJobScheduler scheduler,
+            IBlobSanitizationOrchestrator orchestrator,
             ILogger<UploadVideoCommandHandler> logger)
         {
             _videoDataRepository = videoDataRepository;
             _videoBlobService = videoBlobService;
-            _scheduler = scheduler;
+            _orchestrator = orchestrator;
             _logger = logger;
         }
 
@@ -30,9 +31,9 @@ namespace Kronos.Machina.Application.Handlers
         {
             _logger.LogDebug("Blob upload about to start");
 
-            var blobIdentifier = await _videoBlobService.SaveToBlob(request.Source);
+            var blobId = await _videoBlobService.SaveToBlob(request.Source);
 
-            _logger.LogDebug("Blob uploaded to quarantine with {id} identifier", blobIdentifier);
+            _logger.LogDebug("Blob uploaded to quarantine with {id} identifier", blobId);
 
             var newVideoData = new VideoData()
             {
@@ -40,16 +41,25 @@ namespace Kronos.Machina.Application.Handlers
                 {
                     State = VideoUploadState.BlobOnly,
                     UploadStrategyId = Guid.AllBitsSet,
-                    BlobId = blobIdentifier
+                    BlobData = new()
+                    {
+                        BlobId = blobId,
+                        SanitizationData = new()
+                        {
+                            State = BlobSanitizationState.Unsanitized,
+                        }
+                    }
 
                 },
+                // VideoFormat = null: not set until signature is confirmed
                 Orientation = VideoOrientation.Unidentified,
                 AvailableImageQuality = []
             };
 
             await _videoDataRepository.AddVideoDataAsync(newVideoData, cancellationToken);
+            await _videoDataRepository.SaveChangesAsync(cancellationToken);
 
-            await _scheduler.ScheduleSanitization(newVideoData.UploadData);
+            await _scheduler.ScheduleSignatureValidationAsync(newVideoData, cancellationToken);
         }
     }
 }
