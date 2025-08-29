@@ -1,6 +1,5 @@
 ﻿using Kronos.Machina.Contracts.Commands;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kronos.Machina.API.Controllers
