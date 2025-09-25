@@ -3,5 +3,6 @@
     public class SanitizationData
     {
         public BlobSanitizationState State { get; set; }
+        public BlobSanitizationHistory History { get; set; } = null!;
     }
 }

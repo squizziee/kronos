@@ -15,7 +15,7 @@ namespace Kronos.Machina.Application.Misc.Sanitization
         /// <param name="videoData">New <see cref="VideoData"/> entity that was just added to database.</param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task RequestSanitizationAsync(VideoData videoData, CancellationToken cancellationToken = default);
+        Task InitializeSanitizationAsync(VideoData videoData, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Serves as a messenger to the orchestrator that a stage was completed
@@ -24,7 +24,7 @@ namespace Kronos.Machina.Application.Misc.Sanitization
         /// <param name="stageResult">Work result of the stage that just finished</param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task RequestActionAsync(SanitizationStageResult stageResult,
+        Task RequestActionAsync(SanitizationStageResult stageResult, Type stageType,
             CancellationToken cancellationToken = default);
     }
 }

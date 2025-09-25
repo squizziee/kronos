@@ -1,6 +1,7 @@
 ﻿using Kronos.Machina.Application.Misc.Sanitization;
 using Kronos.Machina.Application.Services;
 using Kronos.Machina.Contracts.Commands;
+using Kronos.Machina.Contracts.Dto;
 using Kronos.Machina.Domain.Entities;
 using Kronos.Machina.Domain.Repositories;
 using MediatR;
@@ -8,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Kronos.Machina.Application.Handlers
 {
-    public class UploadVideoCommandHandler : IRequestHandler<UploadVideoCommand>
+    public class UploadVideoCommandHandler : IRequestHandler<UploadVideoCommand, UploadVideoCommandResponseDto>
     {
         private readonly IVideoDataRepository _videoDataRepository;
         private readonly IVideoBlobService _videoBlobService;
@@ -27,7 +28,8 @@ namespace Kronos.Machina.Application.Handlers
             _logger = logger;
         }
 
-        public async Task Handle(UploadVideoCommand request, CancellationToken cancellationToken)
+        public async Task<UploadVideoCommandResponseDto> Handle(UploadVideoCommand request, 
+            CancellationToken cancellationToken)
         {
             _logger.LogDebug("Blob upload about to start");
 
@@ -60,7 +62,11 @@ namespace Kronos.Machina.Application.Handlers
             await _videoDataRepository.AddVideoDataAsync(newVideoData, cancellationToken);
             await _videoDataRepository.SaveChangesAsync(cancellationToken);
 
-            await _orchestrator.RequestSanitizationAsync(newVideoData, cancellationToken);
+            await _orchestrator.InitializeSanitizationAsync(newVideoData, cancellationToken);
+
+            return new UploadVideoCommandResponseDto { 
+                VideoDataId = newVideoData.Id 
+            };
         }
     }
 }

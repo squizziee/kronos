@@ -1,4 +1,5 @@
-﻿using Kronos.Machina.Contracts.CommonExceptions;
+﻿using Kronos.Machina.Application.Misc.Sanitization;
+using Kronos.Machina.Contracts.CommonExceptions;
 using Kronos.Machina.Domain.Entities;
 using Kronos.Machina.Domain.Repositories;
 using Kronos.Machina.Infrastructure.Data.BlobStorage;
@@ -19,14 +20,17 @@ namespace Kronos.Machina.Infrastructure.Jobs
         private readonly IBlobStorage _blobStorage;
         private readonly IVideoDataRepository _videoDataRepository;
         private readonly IVideoFormatRepository _videoFormatRepository;
+        private readonly IBlobSanitizationOrchestrator _blobSanitizationOrchestrator;
 
         public SignatureValidationBlobSanitizationJob(IBlobStorage blobStorage,
             IVideoDataRepository videoDataRepository,
-            IVideoFormatRepository videoFormatRepository)
+            IVideoFormatRepository videoFormatRepository,
+            IBlobSanitizationOrchestrator blobSanitizationOrchestrator)
         {
             _blobStorage = blobStorage;
             _videoDataRepository = videoDataRepository;
             _videoFormatRepository = videoFormatRepository;
+            _blobSanitizationOrchestrator = blobSanitizationOrchestrator;
         }
 
         public async Task Execute(IJobExecutionContext context)
@@ -57,7 +61,8 @@ namespace Kronos.Machina.Infrastructure.Jobs
                 var format = await CompareSignaturesAsync(blobHeaderFragment, context.CancellationToken);
 
                 videoData.VideoFormat = format;
-                videoData.UploadData.BlobData.SanitizationState = BlobSanitizationState.SignatureConfirmed;
+                videoData.UploadData.BlobData.SanitizationData.State = 
+                    BlobSanitizationState.SignatureConfirmed;
 
                 await _videoFormatRepository.SaveChangesAsync(context.CancellationToken);
             }
@@ -66,20 +71,30 @@ namespace Kronos.Machina.Infrastructure.Jobs
                 // TODO
                 // Schedule blob deletion
             }
+
+            
+            await _blobSanitizationOrchestrator.RequestActionAsync
+            (
+                new SanitizationStageResult() 
+                { 
+                    IsSuccessful = true,
+                    VideoData = videoData,
+                }
+            );
         }
 
         /// <summary>
         /// Compares header to all known signatures and returns the video type according
         /// to provided header. Throws if no such signature is supported.
         /// </summary>
-        /// <param name="header">Header of the file currently being sanitized</param>
+        /// <param name="header">Header of the file currently being sanitized.</param>
         /// <param name="cancellationToken"></param>
         /// <returns>Video format based on signature found in provided header.</returns>
         /// <exception cref="InvalidSignatureForVideoTypeException"></exception>
         private async Task<VideoFormat> CompareSignaturesAsync(byte[] header, 
             CancellationToken cancellationToken = default)
         {
-            var formats = await _videoFormatRepository.GetAllVideoFormatsAsync(cancellationToken);
+            var formats = await _videoFormatRepository.GetAllAsync(cancellationToken);
 
             VideoFormat? actualFormat = null;
 

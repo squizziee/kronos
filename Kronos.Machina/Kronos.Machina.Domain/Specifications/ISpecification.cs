@@ -5,7 +5,7 @@ namespace Kronos.Machina.Domain.Specifications
 {
     public interface ISpecification<TEntity> where TEntity : class
     {
-        bool EnableSplitQuery { get; protected set; }
+        bool UseSplitQuery { get; protected set; }
         bool EnableTracking { get; protected set; }
         bool IgnoreQueryFilters { get; protected set; }
         bool EvaluateOnClientSide { get; protected set; }
