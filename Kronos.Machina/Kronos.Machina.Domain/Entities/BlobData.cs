@@ -2,7 +2,7 @@
 {
     public class BlobData
     {
-        public Guid BlobId { get; set; }
-        public SanitizationData SanitizationData { get; set; }
+        public string BlobId { get; set; } = string.Empty;
+        public SanitizationData SanitizationData { get; set; } = null!;
     }
 }

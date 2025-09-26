@@ -12,13 +12,13 @@ namespace Kronos.Machina.Application.Handlers
     public class UploadVideoCommandHandler : IRequestHandler<UploadVideoCommand, UploadVideoCommandResponseDto>
     {
         private readonly IVideoDataRepository _videoDataRepository;
-        private readonly IVideoBlobService _videoBlobService;
+        private readonly IBlobService _videoBlobService;
         private readonly IBlobSanitizationOrchestrator _orchestrator;
         private readonly ILogger<UploadVideoCommandHandler> _logger;
 
 
         public UploadVideoCommandHandler(IVideoDataRepository videoDataRepository,
-            IVideoBlobService videoBlobService,
+            IBlobService videoBlobService,
             IBlobSanitizationOrchestrator orchestrator,
             ILogger<UploadVideoCommandHandler> logger)
         {
@@ -33,7 +33,13 @@ namespace Kronos.Machina.Application.Handlers
         {
             _logger.LogDebug("Blob upload about to start");
 
-            var blobId = await _videoBlobService.SaveToBlob(request.Source);
+            var blobId = await _videoBlobService.SaveToBlob(request.Source, cancellationToken);
+
+            if (blobId == null)
+            {
+                // TODO
+                throw new Exception("oopsie");
+            }
 
             _logger.LogDebug("Blob uploaded to quarantine with {id} identifier", blobId);
 

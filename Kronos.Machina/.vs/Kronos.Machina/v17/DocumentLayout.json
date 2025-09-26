@@ -3,52 +3,52 @@
   "WorkspaceRootPath": "X:\\Diploma\\Project\\Kronos.Machina\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.infrastructure\\misc\\sanitization\\blobsanitizationorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|solutionrelative:kronos.machina.infrastructure\\misc\\sanitization\\blobsanitizationorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\repositories\\ivideoformatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\repositories\\ivideoformatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8905E39D-7723-4F72-B430-D4AC67992E4A}|Kronos.Machina.Application\\Kronos.Machina.Application.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.application\\misc\\sanitization\\sanitizationstageresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8905E39D-7723-4F72-B430-D4AC67992E4A}|Kronos.Machina.Application\\Kronos.Machina.Application.csproj|solutionrelative:kronos.machina.application\\misc\\sanitization\\sanitizationstageresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\specifications\\ispecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\specifications\\ispecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8905E39D-7723-4F72-B430-D4AC67992E4A}|Kronos.Machina.Application\\Kronos.Machina.Application.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.application\\misc\\sanitization\\iblobsanitizationorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8905E39D-7723-4F72-B430-D4AC67992E4A}|Kronos.Machina.Application\\Kronos.Machina.Application.csproj|solutionrelative:kronos.machina.application\\misc\\sanitization\\iblobsanitizationorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8905E39D-7723-4F72-B430-D4AC67992E4A}|Kronos.Machina.Application\\Kronos.Machina.Application.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.application\\handlers\\uploadvideocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8905E39D-7723-4F72-B430-D4AC67992E4A}|Kronos.Machina.Application\\Kronos.Machina.Application.csproj|solutionrelative:kronos.machina.application\\handlers\\uploadvideocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\entities\\videodata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\entities\\videodata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\entities\\videouploaddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\entities\\videouploaddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\entities\\sanitizationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\entities\\sanitizationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\entities\\blobsanitizationstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\entities\\blobsanitizationstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.infrastructure\\data\\entityconfigurations\\videodataentityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|solutionrelative:kronos.machina.infrastructure\\data\\entityconfigurations\\videodataentityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\entities\\videouploaddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\entities\\videouploaddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\misc\\sanitization\\iblobsanitizationorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\misc\\sanitization\\iblobsanitizationorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.infrastructure\\extensions\\iservicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|solutionrelative:kronos.machina.infrastructure\\extensions\\iservicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\misc\\sanitization\\sanitizationstageresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\misc\\sanitization\\sanitizationstageresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A099E922-4594-4AEC-9F9B-DA4626858D07}|Kronos.Machina.API\\Kronos.Machina.API.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.api\\extensions\\backgroundjobextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A099E922-4594-4AEC-9F9B-DA4626858D07}|Kronos.Machina.API\\Kronos.Machina.API.csproj|solutionrelative:kronos.machina.api\\extensions\\backgroundjobextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A099E922-4594-4AEC-9F9B-DA4626858D07}|Kronos.Machina.API\\Kronos.Machina.API.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.api\\controllers\\videouploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A099E922-4594-4AEC-9F9B-DA4626858D07}|Kronos.Machina.API\\Kronos.Machina.API.csproj|solutionrelative:kronos.machina.api\\controllers\\videouploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A099E922-4594-4AEC-9F9B-DA4626858D07}|Kronos.Machina.API\\Kronos.Machina.API.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A099E922-4594-4AEC-9F9B-DA4626858D07}|Kronos.Machina.API\\Kronos.Machina.API.csproj|solutionrelative:kronos.machina.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5B0E80F-EF1B-4C8C-AED1-0E845FADDC2D}|Kronos.Machina.Contracts\\Kronos.Machina.Contracts.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.contracts\\commands\\uploadvideocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5B0E80F-EF1B-4C8C-AED1-0E845FADDC2D}|Kronos.Machina.Contracts\\Kronos.Machina.Contracts.csproj|solutionrelative:kronos.machina.contracts\\commands\\uploadvideocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8905E39D-7723-4F72-B430-D4AC67992E4A}|Kronos.Machina.Application\\Kronos.Machina.Application.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.application\\handlers\\uploadvideocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8905E39D-7723-4F72-B430-D4AC67992E4A}|Kronos.Machina.Application\\Kronos.Machina.Application.csproj|solutionrelative:kronos.machina.application\\handlers\\uploadvideocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\entities\\videouploadstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\entities\\videouploadstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,47 +58,86 @@
       "DocumentGroups": [
         {
           "DockedWidth": 420,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "IRepository.cs",
               "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Repositories\\IRepository.cs",
               "RelativeDocumentMoniker": "Kronos.Machina.Domain\\Repositories\\IRepository.cs",
               "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Repositories\\IRepository.cs",
               "RelativeToolTip": "Kronos.Machina.Domain\\Repositories\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAWwBMAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T21:39:11.77Z",
+              "WhenOpened": "2025-09-25T18:34:01.348Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IVideoFormatRepository.cs",
-              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Repositories\\IVideoFormatRepository.cs",
-              "RelativeDocumentMoniker": "Kronos.Machina.Domain\\Repositories\\IVideoFormatRepository.cs",
-              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Repositories\\IVideoFormatRepository.cs",
-              "RelativeToolTip": "Kronos.Machina.Domain\\Repositories\\IVideoFormatRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA7AAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.API\\Program.cs",
+              "RelativeDocumentMoniker": "Kronos.Machina.API\\Program.cs",
+              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.API\\Program.cs",
+              "RelativeToolTip": "Kronos.Machina.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T21:38:14.165Z",
+              "WhenOpened": "2025-09-25T21:20:53.786Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ISpecification.cs",
-              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Specifications\\ISpecification.cs",
-              "RelativeDocumentMoniker": "Kronos.Machina.Domain\\Specifications\\ISpecification.cs",
-              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Specifications\\ISpecification.cs",
-              "RelativeToolTip": "Kronos.Machina.Domain\\Specifications\\ISpecification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "IServiceCollectionExtensions.cs",
+              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Extensions\\IServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "Kronos.Machina.Infrastructure\\Extensions\\IServiceCollectionExtensions.cs",
+              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Extensions\\IServiceCollectionExtensions.cs",
+              "RelativeToolTip": "Kronos.Machina.Infrastructure\\Extensions\\IServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T21:40:49.869Z",
+              "WhenOpened": "2025-09-25T21:32:03.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BackgroundJobExtension.cs",
+              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.API\\Extensions\\BackgroundJobExtension.cs",
+              "RelativeDocumentMoniker": "Kronos.Machina.API\\Extensions\\BackgroundJobExtension.cs",
+              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.API\\Extensions\\BackgroundJobExtension.cs",
+              "RelativeToolTip": "Kronos.Machina.API\\Extensions\\BackgroundJobExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T21:21:16.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BlobSanitizationOrchestrator.cs",
+              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Misc\\Sanitization\\BlobSanitizationOrchestrator.cs",
+              "RelativeDocumentMoniker": "Kronos.Machina.Infrastructure\\Misc\\Sanitization\\BlobSanitizationOrchestrator.cs",
+              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Misc\\Sanitization\\BlobSanitizationOrchestrator.cs",
+              "RelativeToolTip": "Kronos.Machina.Infrastructure\\Misc\\Sanitization\\BlobSanitizationOrchestrator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T21:17:14.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VideoUploadStrategy.cs",
+              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Entities\\VideoUploadStrategy.cs",
+              "RelativeDocumentMoniker": "Kronos.Machina.Domain\\Entities\\VideoUploadStrategy.cs",
+              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Entities\\VideoUploadStrategy.cs",
+              "RelativeToolTip": "Kronos.Machina.Domain\\Entities\\VideoUploadStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T20:22:44.435Z",
               "EditorCaption": ""
             },
             {
@@ -107,95 +146,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "UploadVideoCommandHandler.cs",
               "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Application\\Handlers\\UploadVideoCommandHandler.cs",
               "RelativeDocumentMoniker": "Kronos.Machina.Application\\Handlers\\UploadVideoCommandHandler.cs",
               "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Application\\Handlers\\UploadVideoCommandHandler.cs",
               "RelativeToolTip": "Kronos.Machina.Application\\Handlers\\UploadVideoCommandHandler.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowDkAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-13T12:58:18.124Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UploadVideoCommand.cs",
-              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Contracts\\Commands\\UploadVideoCommand.cs",
-              "RelativeDocumentMoniker": "Kronos.Machina.Contracts\\Commands\\UploadVideoCommand.cs",
-              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Contracts\\Commands\\UploadVideoCommand.cs",
-              "RelativeToolTip": "Kronos.Machina.Contracts\\Commands\\UploadVideoCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T12:56:17.721Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "VideoUploadController.cs",
-              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.API\\Controllers\\VideoUploadController.cs",
-              "RelativeDocumentMoniker": "Kronos.Machina.API\\Controllers\\VideoUploadController.cs",
-              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.API\\Controllers\\VideoUploadController.cs",
-              "RelativeToolTip": "Kronos.Machina.API\\Controllers\\VideoUploadController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T12:45:09.306Z"
             }
           ]
         },
         {
           "DockedWidth": 420,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SanitizationStageResult.cs",
-              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Misc\\Sanitization\\SanitizationStageResult.cs",
-              "RelativeDocumentMoniker": "Kronos.Machina.Domain\\Misc\\Sanitization\\SanitizationStageResult.cs",
-              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Misc\\Sanitization\\SanitizationStageResult.cs",
-              "RelativeToolTip": "Kronos.Machina.Domain\\Misc\\Sanitization\\SanitizationStageResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T16:10:27.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "IBlobSanitizationOrchestrator.cs",
-              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Misc\\Sanitization\\IBlobSanitizationOrchestrator.cs",
-              "RelativeDocumentMoniker": "Kronos.Machina.Domain\\Misc\\Sanitization\\IBlobSanitizationOrchestrator.cs",
-              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Misc\\Sanitization\\IBlobSanitizationOrchestrator.cs",
-              "RelativeToolTip": "Kronos.Machina.Domain\\Misc\\Sanitization\\IBlobSanitizationOrchestrator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
+              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Application\\Misc\\Sanitization\\IBlobSanitizationOrchestrator.cs",
+              "RelativeDocumentMoniker": "Kronos.Machina.Application\\Misc\\Sanitization\\IBlobSanitizationOrchestrator.cs",
+              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Application\\Misc\\Sanitization\\IBlobSanitizationOrchestrator.cs",
+              "RelativeToolTip": "Kronos.Machina.Application\\Misc\\Sanitization\\IBlobSanitizationOrchestrator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T15:59:36.736Z",
+              "WhenOpened": "2025-09-25T21:57:17.383Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "VideoDataEntityConfiguration.cs",
-              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Data\\EntityConfigurations\\VideoDataEntityConfiguration.cs",
-              "RelativeDocumentMoniker": "Kronos.Machina.Infrastructure\\Data\\EntityConfigurations\\VideoDataEntityConfiguration.cs",
-              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Data\\EntityConfigurations\\VideoDataEntityConfiguration.cs",
-              "RelativeToolTip": "Kronos.Machina.Infrastructure\\Data\\EntityConfigurations\\VideoDataEntityConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA9AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "SanitizationStageResult.cs",
+              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Application\\Misc\\Sanitization\\SanitizationStageResult.cs",
+              "RelativeDocumentMoniker": "Kronos.Machina.Application\\Misc\\Sanitization\\SanitizationStageResult.cs",
+              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Application\\Misc\\Sanitization\\SanitizationStageResult.cs",
+              "RelativeToolTip": "Kronos.Machina.Application\\Misc\\Sanitization\\SanitizationStageResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T15:51:44.676Z",
+              "WhenOpened": "2025-09-25T21:59:18.288Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "SanitizationData.cs",
+              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Entities\\SanitizationData.cs",
+              "RelativeDocumentMoniker": "Kronos.Machina.Domain\\Entities\\SanitizationData.cs",
+              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Entities\\SanitizationData.cs",
+              "RelativeToolTip": "Kronos.Machina.Domain\\Entities\\SanitizationData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T21:44:55.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "BlobSanitizationState.cs",
               "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Entities\\BlobSanitizationState.cs",
               "RelativeDocumentMoniker": "Kronos.Machina.Domain\\Entities\\BlobSanitizationState.cs",
               "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Entities\\BlobSanitizationState.cs",
               "RelativeToolTip": "Kronos.Machina.Domain\\Entities\\BlobSanitizationState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-27T19:23:34.719Z",
               "EditorCaption": ""
@@ -208,22 +224,9 @@
               "RelativeDocumentMoniker": "Kronos.Machina.Domain\\Entities\\VideoUploadData.cs",
               "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Entities\\VideoUploadData.cs",
               "RelativeToolTip": "Kronos.Machina.Domain\\Entities\\VideoUploadData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-25T15:11:16.363Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VideoData.cs",
-              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Entities\\VideoData.cs",
-              "RelativeDocumentMoniker": "Kronos.Machina.Domain\\Entities\\VideoData.cs",
-              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Entities\\VideoData.cs",
-              "RelativeToolTip": "Kronos.Machina.Domain\\Entities\\VideoData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T15:04:50.973Z",
               "EditorCaption": ""
             }
           ]

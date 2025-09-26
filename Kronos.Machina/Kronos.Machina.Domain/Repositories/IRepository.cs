@@ -14,6 +14,7 @@ namespace Kronos.Machina.Domain.Repositories
             CancellationToken cancellationToken = default);
         Task SoftDeleteAsync(TEntity entity,
             CancellationToken cancellationToken = default);
+
         /// <summary>
         /// Update method that should be used with detached entities. EF Core
         /// change tracking makes it redundant except the case when you want

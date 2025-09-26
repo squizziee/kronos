@@ -1,8 +1,9 @@
 ﻿{
   "UnsanitizedZone": {
-    "BlobPath": "blobs"
+    "BlobPath": "blobs/quarantine"
   },
   "SanitizedZone": {
+    "BlobPath": "blobs/secure",
     "QualityPaths": {
       "ULD_144p": "_144p",
       "LD_240p": "_240p",

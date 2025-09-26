@@ -24,7 +24,7 @@ namespace Kronos.Machina.Application.Misc.Sanitization
         /// <param name="stageResult">Work result of the stage that just finished</param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task RequestActionAsync(SanitizationStageResult stageResult, Type stageType,
+        Task RequestActionAsync(SanitizationStageResult stageResult,
             CancellationToken cancellationToken = default);
     }
 }

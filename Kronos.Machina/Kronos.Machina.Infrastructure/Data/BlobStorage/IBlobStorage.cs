@@ -8,9 +8,11 @@ namespace Kronos.Machina.Infrastructure.Data.BlobStorage
             CancellationToken cancellationToken = default);
         Task<IBlobIdentifier> AddBlobToStorageAsync(IFormFile blobData,
             CancellationToken cancellationToken = default);
-        Task UpdateBlobAsync(IBlobIdentifier blobIdentifier, Stream newblobData,
+        Task MoveFromQuarantineAsync(IBlobIdentifier blobIdentifier,
             CancellationToken cancellationToken = default);
-        Task UpdateBlobAsync(IBlobIdentifier blobIdentifier, IFormFile newblobData,
+        Task UpdateBlobAsync(IBlobIdentifier blobIdentifier, Stream newBlobData,
+            CancellationToken cancellationToken = default);
+        Task UpdateBlobAsync(IBlobIdentifier blobIdentifier, IFormFile newBlobData,
             CancellationToken cancellationToken = default);
         Task RemoveBlobFromStorageAsync(IBlobIdentifier blobIdentifier,
             CancellationToken cancellationToken = default);

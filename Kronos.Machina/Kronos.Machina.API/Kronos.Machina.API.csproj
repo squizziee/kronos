@@ -20,4 +20,6 @@
     <ProjectReference Include="..\Kronos.Machina.Infrastructure\Kronos.Machina.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+
 </Project>

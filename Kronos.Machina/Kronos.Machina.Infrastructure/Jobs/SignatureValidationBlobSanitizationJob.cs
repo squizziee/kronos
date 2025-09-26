@@ -52,7 +52,7 @@ namespace Kronos.Machina.Infrastructure.Jobs
 
             try
             {
-                var blobIdentifier = new DefaultBlobIdentifier(videoData.UploadData.BlobData.BlobId);
+                var blobIdentifier = new DiskMemoryBlobIdentifier(videoData.UploadData.BlobData.BlobId);
 
                 // 20 bytes is enough for any type of suported video file signature
                 var blobHeaderFragment = await _blobStorage.GetBlobDataAsync(blobIdentifier, 0, 20, 
