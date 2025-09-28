@@ -2,9 +2,9 @@
 {
     public class VideoUploadData
     {
-        public required VideoUploadState State { get; set; }
-        public VideoUploadStrategy UploadStrategy { get; set; }
-        public required Guid UploadStrategyId { get; set; }
-        public required BlobData BlobData { get; set; }
+        public VideoUploadState State { get; set; }
+        public VideoUploadStrategy? UploadStrategy { get; set; }
+        public Guid? UploadStrategyId { get; set; }
+        public BlobData BlobData { get; set; } = null!;
     }
 }

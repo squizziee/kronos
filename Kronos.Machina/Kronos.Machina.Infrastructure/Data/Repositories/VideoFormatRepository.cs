@@ -22,17 +22,5 @@ namespace Kronos.Machina.Infrastructure.Data.Repositories
                 .Where(format => format.Name.Equals(name))
                 .FirstOrDefaultAsync(cancellationToken);
         }
-
-        public override Task UpdateAsync(VideoFormat entity, CancellationToken cancellationToken = default)
-        {
-            var entry = _context.VideoFormats
-                .Entry(entity);
-
-            entry.Entity.Name = entity.Name;
-            entry.Entity.Signature = entity.Signature;
-            entry.Entity.Extension = entity.Extension;
-
-            return Task.CompletedTask;
-        }
     }
 }

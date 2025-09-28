@@ -11,10 +11,13 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
     public class BlobSanitizationOrchestrator : IBlobSanitizationOrchestrator
     {
         private readonly ILogger<BlobSanitizationOrchestrator> _logger;
+        private readonly ISchedulerFactory _schedulerFactory;
 
-        public BlobSanitizationOrchestrator(ILogger<BlobSanitizationOrchestrator> logger)
+        public BlobSanitizationOrchestrator(ILogger<BlobSanitizationOrchestrator> logger, 
+            ISchedulerFactory schedulerFactory)
         {
             _logger = logger;
+            _schedulerFactory = schedulerFactory;
         }
 
         public async Task InitializeSanitizationAsync(VideoData videoData, 
@@ -24,17 +27,18 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
             Debug.Assert(videoData.UploadData.BlobData != null);
             Debug.Assert(videoData.UploadData.BlobData.SanitizationData != null);
 
-            var scheduler = await StdSchedulerFactory.GetDefaultScheduler(cancellationToken);
+            var scheduler = await _schedulerFactory.GetScheduler(cancellationToken);
 
             _logger.LogInformation("Started sanitizaion cycle init for VideoData {id}", videoData.Id);
 
             var job = JobBuilder.Create<SignatureValidationBlobSanitizationJob>()
                 .WithIdentity("signatureValidationBlobSanitizationJob")
+                .UsingJobData("VideoDataId", videoData.Id.ToString())
                 .Build();
 
             var trigger = TriggerBuilder.Create()
                 .WithIdentity("signatureValidationBlobSanitizationJobTrigger")
-                .StartNow()
+                .StartAt(DateTimeOffset.Now.AddSeconds(10))
                 .Build();
 
             try

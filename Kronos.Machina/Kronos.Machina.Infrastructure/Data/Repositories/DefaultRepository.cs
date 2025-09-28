@@ -39,7 +39,6 @@ namespace Kronos.Machina.Infrastructure.Data.Repositories
 
         public async Task SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            _context.VideoData.Where(_ => true).Include(vd => vd.AvailableImageQuality).AsSplitQuery();
             await _context.SaveChangesAsync(cancellationToken);
         }
 
@@ -56,6 +55,11 @@ namespace Kronos.Machina.Infrastructure.Data.Repositories
             return Task.CompletedTask;
         }
 
-        public abstract Task UpdateAsync(TEntity entity, CancellationToken cancellationToken = default);
+        public Task UpdateAsync(TEntity entity, CancellationToken cancellationToken = default) 
+        {
+            _context.Update(entity);
+
+            return Task.CompletedTask;
+        }
     }
 }

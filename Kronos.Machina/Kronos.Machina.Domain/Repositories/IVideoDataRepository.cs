@@ -2,16 +2,30 @@
 
 namespace Kronos.Machina.Domain.Repositories
 {
+    /// <summary>
+    /// Repository interface made to manage <see cref="VideoData"/> and all
+    /// the entities that it owns.
+    /// </summary>
     public interface IVideoDataRepository : IRepository<VideoData>
     {
-        Task<VideoData> GetVideoDataByIdAsync(Guid id, CancellationToken cancellationToken = default);
-        Task AddVideoDataAsync(VideoData data, CancellationToken cancellationToken = default);
-        Task DeleteVideoDataAsync(VideoData data, CancellationToken cancellationToken = default);
-        Task SoftDeleteVideoDataAsync(VideoData data, CancellationToken cancellationToken = default);
-        Task UpdateVideoDataAsync(VideoData data, CancellationToken cancellationToken = default);
-        Task UpdateVideoUploadStateAsync(VideoData data, CancellationToken cancellationToken = default);
-        Task SetBlobIdAsync(VideoData data, Guid blobId, CancellationToken cancellationToken = default);
-        Task AddQualityAsync(VideoData data, VideoImageQuality quality,
+        Task UpdateUploadStateByIdAsync(Guid id, VideoUploadState newState,
+            CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Note: this method should preferrably update <see cref="SanitizationData.History"/>
+        /// after the state update transaction is confirmed.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="newState"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        Task UpdateBlobSanitizationStateByIdAsync(Guid id, BlobSanitizationState newState,
+            CancellationToken cancellationToken = default);
+
+        Task SetBlobIdByIdAsync(Guid videoDataId, Guid blobId, 
+            CancellationToken cancellationToken = default);
+
+        Task AddQualityByIdAsync(Guid id, VideoImageQuality quality,
             CancellationToken cancellationToken = default);
     }
 }

@@ -13,6 +13,11 @@ namespace Kronos.Machina.Infrastructure.Data.EntityConfigurations
                 .HasKey(x => x.Id);
 
             builder
+                .HasOne(x => x.VideoFormat)
+                .WithMany()
+                .HasForeignKey(x => x.VideoFormatId);
+
+            builder
                 .Property(vd => vd.AvailableImageQuality)
                 .HasConversion(
                     aiq => JsonSerializer.Serialize(aiq, JsonSerializerOptions.Default),
@@ -26,7 +31,13 @@ namespace Kronos.Machina.Infrastructure.Data.EntityConfigurations
                     builder => builder.OwnsOne(
                         ud => ud.BlobData, 
                         builder => builder.OwnsOne(
-                            bd => bd.SanitizationData
+                            bd => bd.SanitizationData,
+                            builder => builder.OwnsOne(
+                                sd => sd.History,
+                                builder => builder.OwnsMany(
+                                    h => h.Entries
+                                )
+                            )
                         )
                     )
                 );

@@ -6,11 +6,11 @@
     public class VideoData : BaseEntity
     {
         //public required Guid VideoId { get; set; }
-        public required VideoUploadData UploadData { get; set; }
+        public VideoUploadData UploadData { get; set; } = null!;
         public VideoOrientation Orientation { get; set; }
-        public Guid VideoFormatId { get; set; }
+        public Guid? VideoFormatId { get; set; }
         public VideoFormat? VideoFormat { get; set; }
-        public required ICollection<VideoImageQuality> AvailableImageQuality { get; set; }
+        public ICollection<VideoImageQuality> AvailableImageQuality { get; set; } = null!;
 
     }
 }

@@ -9,3 +9,5 @@ X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\Kronos.
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\refint\Kronos.Machina.Domain.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\Kronos.Machina.Domain.pdb
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\ref\Kronos.Machina.Domain.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\Kronos.Machina.Domain.csproj.AssemblyReference.cache
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Domain\obj\Debug\net9.0\Kronos.Machina.Domain.sourcelink.json

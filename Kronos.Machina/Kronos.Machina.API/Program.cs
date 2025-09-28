@@ -1,13 +1,16 @@
 using Kronos.Machina.API.Extensions;
+using Kronos.Machina.Application.Extensions;
+using Kronos.Machina.Infrastructure.Extensions;
 using MediatR;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddBackgroundJobProvider();
-builder.Services.AddMediatR(
-    cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly())    
-);
+builder.Services.AddApplication();
+builder.Services.AddInfrastructureOptions(builder.Configuration);
+builder.Services.AddInfrastructureImplementations(builder.Configuration);
+builder.Services.AddDatabase(builder.Configuration);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

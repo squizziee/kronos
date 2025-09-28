@@ -16,7 +16,6 @@ namespace Kronos.Machina.Application.Handlers
         private readonly IBlobSanitizationOrchestrator _orchestrator;
         private readonly ILogger<UploadVideoCommandHandler> _logger;
 
-
         public UploadVideoCommandHandler(IVideoDataRepository videoDataRepository,
             IBlobService videoBlobService,
             IBlobSanitizationOrchestrator orchestrator,
@@ -28,7 +27,7 @@ namespace Kronos.Machina.Application.Handlers
             _logger = logger;
         }
 
-        public async Task<UploadVideoCommandResponseDto> Handle(UploadVideoCommand request, 
+        public async Task<UploadVideoCommandResponseDto> Handle(UploadVideoCommand request,
             CancellationToken cancellationToken)
         {
             _logger.LogDebug("Blob upload about to start");
@@ -45,17 +44,22 @@ namespace Kronos.Machina.Application.Handlers
 
             var newVideoData = new VideoData()
             {
+                Id = Guid.NewGuid(),
                 UploadData = new()
-                {
+                {     
                     State = VideoUploadState.BlobOnly,
                     // TODO
-                    UploadStrategyId = Guid.AllBitsSet,
+                    //UploadStrategyId = Guid.AllBitsSet,
                     BlobData = new()
                     {
                         BlobId = blobId,
                         SanitizationData = new()
                         {
                             State = BlobSanitizationState.Unsanitized,
+                            History = new ()
+                            {
+                                Entries = []
+                            }
                         }
                     }
 
@@ -65,13 +69,14 @@ namespace Kronos.Machina.Application.Handlers
                 AvailableImageQuality = []
             };
 
-            await _videoDataRepository.AddVideoDataAsync(newVideoData, cancellationToken);
+            await _videoDataRepository.AddAsync(newVideoData, cancellationToken);
             await _videoDataRepository.SaveChangesAsync(cancellationToken);
 
             await _orchestrator.InitializeSanitizationAsync(newVideoData, cancellationToken);
 
-            return new UploadVideoCommandResponseDto { 
-                VideoDataId = newVideoData.Id 
+            return new UploadVideoCommandResponseDto
+            {
+                VideoDataId = newVideoData.Id
             };
         }
     }

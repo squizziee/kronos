@@ -10,3 +10,4 @@ X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\Kron
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\refint\Kronos.Machina.Contracts.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\Kronos.Machina.Contracts.pdb
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\ref\Kronos.Machina.Contracts.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Contracts\obj\Debug\net9.0\Kronos.Machina.Contracts.sourcelink.json

@@ -4,6 +4,7 @@ using Kronos.Machina.Domain.Entities;
 using Kronos.Machina.Domain.Repositories;
 using Kronos.Machina.Infrastructure.Data.BlobStorage;
 using Kronos.Machina.Infrastructure.Exceptions;
+using Microsoft.Extensions.Logging;
 using Quartz;
 
 namespace Kronos.Machina.Infrastructure.Jobs
@@ -21,20 +22,25 @@ namespace Kronos.Machina.Infrastructure.Jobs
         private readonly IVideoDataRepository _videoDataRepository;
         private readonly IVideoFormatRepository _videoFormatRepository;
         private readonly IBlobSanitizationOrchestrator _blobSanitizationOrchestrator;
+        private readonly ILogger<SignatureValidationBlobSanitizationJob> _logger;
 
         public SignatureValidationBlobSanitizationJob(IBlobStorage blobStorage,
             IVideoDataRepository videoDataRepository,
             IVideoFormatRepository videoFormatRepository,
-            IBlobSanitizationOrchestrator blobSanitizationOrchestrator)
+            IBlobSanitizationOrchestrator blobSanitizationOrchestrator,
+            ILogger<SignatureValidationBlobSanitizationJob> logger)
         {
             _blobStorage = blobStorage;
             _videoDataRepository = videoDataRepository;
             _videoFormatRepository = videoFormatRepository;
             _blobSanitizationOrchestrator = blobSanitizationOrchestrator;
+            _logger = logger;
         }
 
         public async Task Execute(IJobExecutionContext context)
         {
+            _logger.LogInformation("Job started");
+
             var videoDataStrGuid = context.JobDetail.JobDataMap.GetString("VideoDataId");
 
             if (!Guid.TryParse(videoDataStrGuid, out var videoDataId))
@@ -42,7 +48,7 @@ namespace Kronos.Machina.Infrastructure.Jobs
                 throw new ArgumentException("VideoDataId provided is not a valid Guid");
             }
 
-            var videoData = await _videoDataRepository.GetVideoDataByIdAsync(videoDataId, 
+            var videoData = await _videoDataRepository.GetByIdAsync(videoDataId,
                 context.CancellationToken);
 
             if (videoData == null)
@@ -52,33 +58,39 @@ namespace Kronos.Machina.Infrastructure.Jobs
 
             try
             {
-                var blobIdentifier = new DiskMemoryBlobIdentifier(videoData.UploadData.BlobData.BlobId);
+                var blobIdentifier = DiskMemoryBlobIdentifier.Construct(videoData.UploadData.BlobData.BlobId);
 
                 // 20 bytes is enough for any type of suported video file signature
-                var blobHeaderFragment = await _blobStorage.GetBlobDataAsync(blobIdentifier, 0, 20, 
+                var blobHeaderFragment = await _blobStorage.GetBlobDataAsync(blobIdentifier, 0, 20,
                     context.CancellationToken);
 
                 var format = await CompareSignaturesAsync(blobHeaderFragment, context.CancellationToken);
 
                 videoData.VideoFormat = format;
-                videoData.UploadData.BlobData.SanitizationData.State = 
+                videoData.UploadData.BlobData.SanitizationData.State =
                     BlobSanitizationState.SignatureConfirmed;
 
                 await _videoFormatRepository.SaveChangesAsync(context.CancellationToken);
+
+                _logger.LogInformation("Signature validation for VideoData {id} succeeded",
+                    videoDataId);
             }
             catch (InvalidSignatureForVideoTypeException ex)
             {
+                _logger.LogError("Signature validation for VideoData {id} failed: {err}",
+                    videoDataId, ex.Message);
                 // TODO
                 // Schedule blob deletion
             }
 
-            
+
             await _blobSanitizationOrchestrator.RequestActionAsync
             (
-                new SanitizationStageResult() 
-                { 
+                new SanitizationStageResult()
+                {
                     IsSuccessful = true,
                     VideoData = videoData,
+                    StageType = typeof(SignatureValidationBlobSanitizationJob)
                 }
             );
         }
@@ -91,7 +103,7 @@ namespace Kronos.Machina.Infrastructure.Jobs
         /// <param name="cancellationToken"></param>
         /// <returns>Video format based on signature found in provided header.</returns>
         /// <exception cref="InvalidSignatureForVideoTypeException"></exception>
-        private async Task<VideoFormat> CompareSignaturesAsync(byte[] header, 
+        private async Task<VideoFormat> CompareSignaturesAsync(byte[] header,
             CancellationToken cancellationToken = default)
         {
             var formats = await _videoFormatRepository.GetAllAsync(cancellationToken);
@@ -100,8 +112,9 @@ namespace Kronos.Machina.Infrastructure.Jobs
 
             foreach (var format in formats)
             {
-                if (CompareBytewise(header, format.Signature)) {
-                    actualFormat = format; 
+                if (CompareBytewise(header, format.Signature))
+                {
+                    actualFormat = format;
                     break;
                 }
             }
@@ -133,7 +146,7 @@ namespace Kronos.Machina.Infrastructure.Jobs
 
             for (int i = 0; i < formatSignature.Length; i++)
             {
-                sum += actualBytes[i] - formatSignature[i];            
+                sum += actualBytes[i] - formatSignature[i];
             }
 
             return sum == 0;

@@ -11,6 +11,11 @@
         "Name": "Source",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
+      },
+      {
+        "Name": "UploadStrategyId",
+        "Type": "System.Guid",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

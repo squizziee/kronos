@@ -13,3 +13,8 @@ X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\refint\Kronos.Machina.Infrastructure.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\Kronos.Machina.Infrastructure.pdb
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\ref\Kronos.Machina.Infrastructure.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\obj\Debug\net9.0\Kronos.Machina.Infrastructure.sourcelink.json
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\bin\Debug\net9.0\Kronos.Machina.Application.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\bin\Debug\net9.0\Kronos.Machina.Contracts.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\bin\Debug\net9.0\Kronos.Machina.Application.pdb
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.Infrastructure\bin\Debug\net9.0\Kronos.Machina.Contracts.pdb

@@ -18,9 +18,9 @@ namespace Kronos.Machina.API.Controllers
         public async Task<IActionResult> UploadVideoFile(UploadVideoCommand request, 
             CancellationToken cancellationToken)
         {
-            await _sender.Send(request, cancellationToken);
+            var result = await _sender.Send(request, cancellationToken);
 
-            return Ok();
+            return Ok(result);
         }
     }
 }

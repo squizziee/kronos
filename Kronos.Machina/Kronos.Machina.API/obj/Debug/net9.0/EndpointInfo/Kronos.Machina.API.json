@@ -10,6 +10,16 @@
         "tags": [
           "VideoUpload"
         ],
+        "parameters": [
+          {
+            "name": "UploadStrategyId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "multipart/form-data": {
