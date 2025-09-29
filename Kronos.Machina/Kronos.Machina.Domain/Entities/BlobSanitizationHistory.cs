@@ -17,6 +17,8 @@
                     OrderNumber = _nextEntryIndex,
                 }
             );
+
+            ++_nextEntryIndex;
         }
     }
 }

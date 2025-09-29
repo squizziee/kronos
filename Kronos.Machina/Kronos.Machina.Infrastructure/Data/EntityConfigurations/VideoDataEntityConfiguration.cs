@@ -38,7 +38,12 @@ namespace Kronos.Machina.Infrastructure.Data.EntityConfigurations
                                 {
                                     builder.OwnsMany(
                                         h => h.Entries,
-                                        builder => builder.ToJson()
+                                        builder =>
+                                        {
+                                            builder.WithOwner().HasForeignKey("_historyId");
+                                            builder.Property<int>("_id");
+                                            builder.HasKey("_id");
+                                        }
                                     );
                                     builder
                                         .Property<int>("_nextEntryIndex")

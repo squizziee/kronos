@@ -181,3 +181,4 @@ X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\zh-Hans\Mi
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\AutoMapper.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\obj\Debug\net9.0\Kronos.Machina.API.MvcApplicationPartsAssemblyInfo.cs
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

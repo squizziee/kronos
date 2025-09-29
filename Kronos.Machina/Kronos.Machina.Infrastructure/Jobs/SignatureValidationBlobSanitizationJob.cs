@@ -79,7 +79,7 @@ namespace Kronos.Machina.Infrastructure.Jobs
             catch (InvalidSignatureForVideoTypeException ex)
             {
                 videoData.UploadData.BlobData.SanitizationData
-                    .History.AddEntry("Signature not verified, invalid file", true);
+                    .History.AddEntry("Signature not verified, invalid file", false);
 
                 await _videoFormatRepository.SaveChangesAsync(context.CancellationToken);
 
