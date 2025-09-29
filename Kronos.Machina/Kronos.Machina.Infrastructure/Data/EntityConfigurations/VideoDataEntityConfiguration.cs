@@ -34,9 +34,17 @@ namespace Kronos.Machina.Infrastructure.Data.EntityConfigurations
                             bd => bd.SanitizationData,
                             builder => builder.OwnsOne(
                                 sd => sd.History,
-                                builder => builder.OwnsMany(
-                                    h => h.Entries
-                                )
+                                builder => 
+                                {
+                                    builder.OwnsMany(
+                                        h => h.Entries,
+                                        builder => builder.ToJson()
+                                    );
+                                    builder
+                                        .Property<int>("_nextEntryIndex")
+                                        .HasColumnType("NextEntryIndex")
+                                        .HasDefaultValue(0);
+                                }
                             )
                         )
                     )

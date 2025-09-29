@@ -165,9 +165,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Mapster": {
+            "AutoMapper": {
               "target": "Package",
-              "version": "[7.4.0, )"
+              "version": "[15.0.1, )"
             },
             "MediatR": {
               "target": "Package",
@@ -400,6 +400,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.8, )"
@@ -445,6 +449,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

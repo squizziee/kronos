@@ -1,9 +1,9 @@
 ﻿using Kronos.Machina.Application.Misc.Sanitization;
 using Kronos.Machina.Domain.Entities;
-using Kronos.Machina.Infrastructure.Jobs;
+using Kronos.Machina.Infrastructure.ConfigOptions;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Quartz;
-using Quartz.Impl;
 using System.Diagnostics;
 
 namespace Kronos.Machina.Infrastructure.Misc.Sanitization
@@ -12,12 +12,18 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
     {
         private readonly ILogger<BlobSanitizationOrchestrator> _logger;
         private readonly ISchedulerFactory _schedulerFactory;
+        private readonly BlobSanitizationStageFactory _stageFactory;
+        private readonly PipelineConfig _pipelineConfig;
 
         public BlobSanitizationOrchestrator(ILogger<BlobSanitizationOrchestrator> logger, 
-            ISchedulerFactory schedulerFactory)
+            ISchedulerFactory schedulerFactory,
+            BlobSanitizationStageFactory stageFactory,
+            IOptions<PipelineConfig> options)
         {
             _logger = logger;
             _schedulerFactory = schedulerFactory;
+            _stageFactory = stageFactory;
+            _pipelineConfig = options.Value;
         }
 
         public async Task InitializeSanitizationAsync(VideoData videoData, 
@@ -29,28 +35,28 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
 
             var scheduler = await _schedulerFactory.GetScheduler(cancellationToken);
 
-            _logger.LogInformation("Started sanitizaion cycle init for VideoData {id}", videoData.Id);
+            _logger.LogInformation("Initializing sanitizaion cycle for VideoData {id}...", videoData.Id);
 
-            var job = JobBuilder.Create<SignatureValidationBlobSanitizationJob>()
-                .WithIdentity("signatureValidationBlobSanitizationJob")
-                .UsingJobData("VideoDataId", videoData.Id.ToString())
-                .Build();
+            var stageId = _pipelineConfig.Stages
+                .Single(s => s.Order == 0).Id;
 
-            var trigger = TriggerBuilder.Create()
-                .WithIdentity("signatureValidationBlobSanitizationJobTrigger")
-                .StartAt(DateTimeOffset.Now.AddSeconds(10))
-                .Build();
+            var stage = _stageFactory.GetStageInstance(stageId);
+
+            var jobId = $"{stageId}-{videoData.Id}";
+
+            (var job, var trigger) = stage
+                .GetExucatables(jobId, ("VideoDataId", videoData.Id.ToString()));
 
             try
             {
                 await scheduler.ScheduleJob(job, trigger, cancellationToken);
 
-                _logger.LogInformation("Sanitizaion init for VideoData {id} was successful", videoData.Id);
+                _logger.LogInformation("Initialization success for VideoData {id}", videoData.Id);
                 _logger.LogInformation("First stage of sanitizaion for VideoData {id} has begun", videoData.Id);
             }
             catch (Exception ex)
             {
-                _logger.LogInformation("Sanitizaion init for VideoData {id} failed: {err}", 
+                _logger.LogInformation("Initialization failure for VideoData {id}: {err}",
                     videoData.Id, ex.Message);
             }
         }

@@ -1,6 +1,8 @@
 ﻿using Kronos.Machina.Application.Handlers;
+using Kronos.Machina.Application.Mappers;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using AutoMapper;
 
 namespace Kronos.Machina.Application.Extensions
 {
@@ -12,6 +14,8 @@ namespace Kronos.Machina.Application.Extensions
             (
                 cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly())
             );
+
+            services.AddAutoMapper(cfg => cfg.AddMaps(typeof(VideoDataMapperProfile)));
 
             return services;
         }

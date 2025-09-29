@@ -42,8 +42,6 @@ X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\Quartz.Ext
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\Quartz.Extensions.Hosting.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\Kronos.Machina.Contracts.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\Kronos.Machina.Contracts.pdb
-X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\Mapster.dll
-X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\Mapster.Core.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\Kronos.Machina.Application.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\Kronos.Machina.Application.pdb
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\Microsoft.OpenApi.dll
@@ -99,7 +97,6 @@ X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\runtimes\w
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\runtimes\win-arm64\native\e_sqlite3.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
-X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\obj\Debug\net9.0\Kronos.Machina.API.MvcApplicationPartsAssemblyInfo.cs
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\Humanizer.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\Microsoft.Build.Locator.dll
@@ -182,4 +179,5 @@ X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\ru\Microso
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\bin\Debug\net9.0\AutoMapper.dll
+X:\Diploma\Project\Kronos.Machina\Kronos.Machina.API\obj\Debug\net9.0\Kronos.Machina.API.MvcApplicationPartsAssemblyInfo.cs

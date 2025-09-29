@@ -39,8 +39,6 @@ namespace Kronos.Machina.Infrastructure.Jobs
 
         public async Task Execute(IJobExecutionContext context)
         {
-            _logger.LogInformation("Job started");
-
             var videoDataStrGuid = context.JobDetail.JobDataMap.GetString("VideoDataId");
 
             if (!Guid.TryParse(videoDataStrGuid, out var videoDataId))
@@ -70,6 +68,9 @@ namespace Kronos.Machina.Infrastructure.Jobs
                 videoData.UploadData.BlobData.SanitizationData.State =
                     BlobSanitizationState.SignatureConfirmed;
 
+                videoData.UploadData.BlobData.SanitizationData
+                    .History.AddEntry($"Signature verified, format: {format.Name}", true);
+
                 await _videoFormatRepository.SaveChangesAsync(context.CancellationToken);
 
                 _logger.LogInformation("Signature validation for VideoData {id} succeeded",
@@ -77,6 +78,11 @@ namespace Kronos.Machina.Infrastructure.Jobs
             }
             catch (InvalidSignatureForVideoTypeException ex)
             {
+                videoData.UploadData.BlobData.SanitizationData
+                    .History.AddEntry("Signature not verified, invalid file", true);
+
+                await _videoFormatRepository.SaveChangesAsync(context.CancellationToken);
+
                 _logger.LogError("Signature validation for VideoData {id} failed: {err}",
                     videoDataId, ex.Message);
                 // TODO
@@ -96,7 +102,7 @@ namespace Kronos.Machina.Infrastructure.Jobs
         }
 
         /// <summary>
-        /// Compares header to all known signatures and returns the video type according
+        /// Compares header to all supported signatures and returns the video type according
         /// to provided header. Throws if no such signature is supported.
         /// </summary>
         /// <param name="header">Header of the file currently being sanitized.</param>

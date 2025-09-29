@@ -1,4 +1,5 @@
 ﻿using Kronos.Machina.Infrastructure.ConfigOptions;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -9,14 +10,17 @@ namespace Kronos.Machina.Infrastructure.Data.BlobStorage
     {
         private readonly SanitizedBlobZoneInfo _sanitizedBlobZoneInfo;
         private readonly UnsanitizedBlobZoneInfo _unsanitizedBlobZoneInfo;
+        private readonly IWebHostEnvironment _environment;
         private readonly ILogger<DiskMemoryBlobStorage> _logger;
 
         public DiskMemoryBlobStorage(IOptionsSnapshot<SanitizedBlobZoneInfo> options1,
             IOptionsSnapshot<UnsanitizedBlobZoneInfo> options2,
+            IWebHostEnvironment environment,
             ILogger<DiskMemoryBlobStorage> logger)
         {
             _sanitizedBlobZoneInfo = options1.Value;
             _unsanitizedBlobZoneInfo = options2.Value;
+            _environment = environment;
             _logger = logger;
         }
 
@@ -39,12 +43,16 @@ namespace Kronos.Machina.Infrastructure.Data.BlobStorage
         private async Task<IBlobIdentifier> AddBlobToStorageInternalAsync(IBlobIdentifier blobId, 
             Stream blobData, CancellationToken cancellationToken = default)
         {
+            var path = Path.Combine
+            (
+                _environment.ContentRootPath,
+                _unsanitizedBlobZoneInfo.BlobPath,
+                blobId.GetStorageName()
+            );
+
             try
             {
-                using var file = File.OpenWrite(
-                    $"{_unsanitizedBlobZoneInfo.BlobPath}/{blobId.GetStorageName()}"
-                );
-
+                using var file = File.OpenWrite(path);
                 await blobData.CopyToAsync(file, cancellationToken);
             }
             catch (Exception ex)
@@ -60,12 +68,16 @@ namespace Kronos.Machina.Infrastructure.Data.BlobStorage
         private async Task<IBlobIdentifier> AddBlobToStorageInternalAsync(IBlobIdentifier blobId,
             IFormFile blobData, CancellationToken cancellationToken = default)
         {
+            var path = Path.Combine
+            (
+                _environment.ContentRootPath,
+                _unsanitizedBlobZoneInfo.BlobPath.Replace('/', Path.DirectorySeparatorChar),
+                blobId.GetStorageName()
+            );
+
             try
             {
-                using var file = File.OpenWrite(
-                    $"{_unsanitizedBlobZoneInfo.BlobPath}/{blobId.GetStorageName()}"
-                );
-
+                using var file = File.OpenWrite(path);  
                 await blobData.CopyToAsync(file, cancellationToken);
             }
             catch (Exception ex)

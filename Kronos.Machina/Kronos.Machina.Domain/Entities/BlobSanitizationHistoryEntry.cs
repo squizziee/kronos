@@ -2,10 +2,9 @@
 {
     public class BlobSanitizationHistoryEntry
     {
-        public int OrderNumber { get; set; }
-        public string StageType { get; set; } = string.Empty;
-        public bool IsSuccessful { get; set; }
-        public string Description { get; set; } = string.Empty;
-        public DateTimeOffset CreatedAt { get; set; }
+        public required int OrderNumber { get; set; }
+        public required bool IsSuccessful { get; set; }
+        public required string Description { get; set; } = string.Empty;
+        public required DateTimeOffset CreatedAt { get; set; }
     }
 }

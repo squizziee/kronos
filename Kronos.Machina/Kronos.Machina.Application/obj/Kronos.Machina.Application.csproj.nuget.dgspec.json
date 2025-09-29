@@ -58,9 +58,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Mapster": {
+            "AutoMapper": {
               "target": "Package",
-              "version": "[7.4.0, )"
+              "version": "[15.0.1, )"
             },
             "MediatR": {
               "target": "Package",

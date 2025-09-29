@@ -19,5 +19,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Kronos.Machina.API.Controllers.VideoUploadController",
+    "Method": "GetAllVideoData",
+    "RelativePath": "api/video/upload",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Kronos.Machina.Contracts.Queries.GetFullVideoDataByIdQuery",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

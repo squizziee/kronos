@@ -171,6 +171,11 @@ namespace Kronos.Machina.Infrastructure.Migrations
                                                     b4.Property<Guid>("SanitizationDataBlobDataVideoUploadDataVideoDataId")
                                                         .HasColumnType("TEXT");
 
+                                                    b4.Property<int>("_nextEntryIndex")
+                                                        .ValueGeneratedOnAdd()
+                                                        .HasColumnType("NextEntryIndex")
+                                                        .HasDefaultValue(0);
+
                                                     b4.HasKey("SanitizationDataBlobDataVideoUploadDataVideoDataId");
 
                                                     b4.ToTable("VideoData");
@@ -199,10 +204,6 @@ namespace Kronos.Machina.Infrastructure.Migrations
 
                                                             b5.Property<int>("OrderNumber")
                                                                 .HasColumnType("INTEGER");
-
-                                                            b5.Property<string>("StageType")
-                                                                .IsRequired()
-                                                                .HasColumnType("TEXT");
 
                                                             b5.HasKey("BlobSanitizationHistorySanitizationDataBlobDataVideoUploadDataVideoDataId", "Id");
 

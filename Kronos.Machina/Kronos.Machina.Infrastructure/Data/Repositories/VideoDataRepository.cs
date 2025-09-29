@@ -16,7 +16,12 @@ namespace Kronos.Machina.Infrastructure.Data.Repositories
 			throw new NotImplementedException();
 		}
 
-		public Task SetBlobIdByIdAsync(Guid videoDataId, Guid blobId,
+        public Task<IEnumerable<VideoData>> GetAllAsync(CancellationToken cancellationToken)
+        {
+			return Task.FromResult(_context.VideoData.ToList().AsEnumerable());
+        }
+
+        public Task SetBlobIdByIdAsync(Guid videoDataId, Guid blobId,
 			CancellationToken cancellationToken = default)
 		{
 			throw new NotImplementedException();

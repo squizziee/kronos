@@ -8,6 +8,8 @@ namespace Kronos.Machina.Domain.Repositories
     /// </summary>
     public interface IVideoDataRepository : IRepository<VideoData>
     {
+        Task<IEnumerable<VideoData>> GetAllAsync(CancellationToken cancellationToken);
+
         Task UpdateUploadStateByIdAsync(Guid id, VideoUploadState newState,
             CancellationToken cancellationToken = default);
 

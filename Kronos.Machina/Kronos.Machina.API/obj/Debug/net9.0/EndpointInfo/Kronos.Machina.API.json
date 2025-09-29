@@ -48,8 +48,34 @@
             "description": "OK"
           }
         }
+      },
+      "get": {
+        "tags": [
+          "VideoUpload"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/GetFullVideoDataByIdQuery"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     }
   },
-  "components": { }
+  "components": {
+    "schemas": {
+      "GetFullVideoDataByIdQuery": {
+        "type": "object",
+        "additionalProperties": false
+      }
+    }
+  }
 }

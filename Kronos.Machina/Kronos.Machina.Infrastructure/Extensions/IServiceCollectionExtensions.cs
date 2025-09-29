@@ -24,9 +24,11 @@ namespace Kronos.Machina.Infrastructure.Extensions
 
             services.AddScoped<IVideoDataRepository, VideoDataRepository>();
             services.AddScoped<IVideoFormatRepository, VideoFormatRepository>();
+            services.AddScoped<BlobSanitizationStageFactory>();
 
             services.Configure<SanitizedBlobZoneInfo>(configuration.GetSection("SanitizedZone"));
             services.Configure<UnsanitizedBlobZoneInfo>(configuration.GetSection("UnsanitizedZone"));
+            services.Configure<PipelineConfig>(configuration.GetSection("Pipeline"));
 
             return services;
         }
