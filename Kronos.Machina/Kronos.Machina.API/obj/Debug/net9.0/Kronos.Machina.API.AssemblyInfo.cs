@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kronos.Machina.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d20c8c4bf112f6a71954df0c98a7309f095543f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b1249a4fa97d180353a960d314012e43e2706a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kronos.Machina.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kronos.Machina.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

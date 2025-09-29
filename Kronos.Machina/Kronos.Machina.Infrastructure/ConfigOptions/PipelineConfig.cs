@@ -2,10 +2,10 @@
 {
     public record PipelineConfig
     {
-        public required ICollection<PipelineConfigStage> Stages { get; set; }
+        public required ICollection<PipelineStageConfig> Stages { get; set; }
     }
 
-    public record PipelineConfigStage
+    public record PipelineStageConfig
     {
         public required string Id { get; set; }
         public required uint Order  { get; set; }

@@ -29,5 +29,7 @@ namespace Kronos.Machina.Domain.Repositories
 
         Task AddQualityByIdAsync(Guid id, VideoImageQuality quality,
             CancellationToken cancellationToken = default);
+
+        void AttachModified(VideoData videoData);
     }
 }

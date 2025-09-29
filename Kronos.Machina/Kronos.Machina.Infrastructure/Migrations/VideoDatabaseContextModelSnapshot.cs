@@ -156,6 +156,9 @@ namespace Kronos.Machina.Infrastructure.Migrations
                                             b3.Property<Guid>("BlobDataVideoUploadDataVideoDataId")
                                                 .HasColumnType("TEXT");
 
+                                            b3.Property<int>("NextStageNumber")
+                                                .HasColumnType("INTEGER");
+
                                             b3.Property<int>("State")
                                                 .HasColumnType("INTEGER");
 

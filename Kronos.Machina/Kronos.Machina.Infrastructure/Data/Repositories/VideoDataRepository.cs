@@ -16,6 +16,12 @@ namespace Kronos.Machina.Infrastructure.Data.Repositories
 			throw new NotImplementedException();
 		}
 
+        public void AttachModified(VideoData videoData)
+        {
+            _context.Attach(videoData);
+			_context.Entry(videoData).State = EntityState.Modified;
+        }
+
         public Task<IEnumerable<VideoData>> GetAllAsync(CancellationToken cancellationToken)
         {
 			return Task.FromResult(_context.VideoData.ToList().AsEnumerable());
