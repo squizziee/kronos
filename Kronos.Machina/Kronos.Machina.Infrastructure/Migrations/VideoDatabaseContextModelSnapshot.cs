@@ -60,6 +60,7 @@ namespace Kronos.Machina.Infrastructure.Migrations
 
                     b.Property<string>("Extension")
                         .IsRequired()
+                        .HasMaxLength(10)
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsSoftDeleted")
@@ -68,17 +69,69 @@ namespace Kronos.Machina.Infrastructure.Migrations
                     b.Property<DateTimeOffset>("LastUpdatedAt")
                         .HasColumnType("TEXT");
 
+                    b.PrimitiveCollection<string>("MandatorySignatureByteIndexes")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
                     b.Property<byte[]>("Signature")
                         .IsRequired()
+                        .HasMaxLength(30)
                         .HasColumnType("BLOB");
 
                     b.HasKey("Id");
 
                     b.ToTable("VideoFormats");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("12345678-1234-1234-1234-123456789abc"),
+                            CreatedAt = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Extension = ".mp4",
+                            IsSoftDeleted = false,
+                            LastUpdatedAt = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            MandatorySignatureByteIndexes = "[4,5,6,7]",
+                            Name = "MP4",
+                            Signature = new byte[] { 0, 0, 0, 24, 102, 116, 121, 112 }
+                        },
+                        new
+                        {
+                            Id = new Guid("a1b2c3d4-e5f6-7890-abcd-ef1234567890"),
+                            CreatedAt = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Extension = ".avi",
+                            IsSoftDeleted = false,
+                            LastUpdatedAt = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            MandatorySignatureByteIndexes = "[0,1,2,3,8,9,10,11]",
+                            Name = "AVI",
+                            Signature = new byte[] { 82, 73, 70, 70, 0, 0, 0, 0, 65, 86, 73, 32 }
+                        },
+                        new
+                        {
+                            Id = new Guid("f47ac10b-58cc-4372-a567-0e02b2c3d479"),
+                            CreatedAt = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Extension = ".mov",
+                            IsSoftDeleted = false,
+                            LastUpdatedAt = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            MandatorySignatureByteIndexes = "[4,5,6,7,8,9]",
+                            Name = "MOV (QuickTime)",
+                            Signature = new byte[] { 0, 0, 0, 20, 102, 116, 121, 112, 113, 116, 32, 32 }
+                        },
+                        new
+                        {
+                            Id = new Guid("550e8400-e29b-41d4-a716-446655440000"),
+                            CreatedAt = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Extension = ".mpeg",
+                            IsSoftDeleted = false,
+                            LastUpdatedAt = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            MandatorySignatureByteIndexes = "[0,1,2,3]",
+                            Name = "MPEG",
+                            Signature = new byte[] { 0, 0, 1, 186 }
+                        });
                 });
 
             modelBuilder.Entity("Kronos.Machina.Domain.Entities.VideoUploadStrategy", b =>

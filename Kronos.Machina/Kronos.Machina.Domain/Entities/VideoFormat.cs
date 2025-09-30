@@ -9,5 +9,6 @@
         public required string Name { get; set; }
         public required byte[] Signature { get; set; }
         public required string Extension { get; set; }
+        public required int[] MandatorySignatureByteIndexes { get; set; }
     }
 }

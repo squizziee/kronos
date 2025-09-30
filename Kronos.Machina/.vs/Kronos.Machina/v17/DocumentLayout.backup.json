@@ -7,12 +7,20 @@
       "RelativeMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|solutionrelative:kronos.machina.infrastructure\\misc\\sanitization\\blobsanitizationorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.infrastructure\\jobs\\sanitization\\signaturevalidationblobsanitizationjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|solutionrelative:kronos.machina.infrastructure\\jobs\\sanitization\\signaturevalidationblobsanitizationjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.infrastructure\\jobs\\sanitization\\invalidblobdeletionjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|solutionrelative:kronos.machina.infrastructure\\jobs\\sanitization\\invalidblobdeletionjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.infrastructure\\jobs\\sanitization\\signaturevalidationblobsanitizationjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|solutionrelative:kronos.machina.infrastructure\\jobs\\sanitization\\signaturevalidationblobsanitizationjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\entities\\blobsanitizationhistoryentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\entities\\blobsanitizationhistoryentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.infrastructure\\misc\\sanitization\\blobsanitizationstagefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|solutionrelative:kronos.machina.infrastructure\\misc\\sanitization\\blobsanitizationstagefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8905E39D-7723-4F72-B430-D4AC67992E4A}|Kronos.Machina.Application\\Kronos.Machina.Application.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.application\\extensions\\iservicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8905E39D-7723-4F72-B430-D4AC67992E4A}|Kronos.Machina.Application\\Kronos.Machina.Application.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.application\\misc\\sanitization\\sanitizationstageresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8905E39D-7723-4F72-B430-D4AC67992E4A}|Kronos.Machina.Application\\Kronos.Machina.Application.csproj|solutionrelative:kronos.machina.application\\misc\\sanitization\\sanitizationstageresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.infrastructure\\misc\\sanitization\\blobsanitizationstagefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|solutionrelative:kronos.machina.infrastructure\\misc\\sanitization\\blobsanitizationstagefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.domain\\entities\\blobsanitizationhistoryentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4EB56F1-959A-4F80-95E1-CF50194095E5}|Kronos.Machina.Domain\\Kronos.Machina.Domain.csproj|solutionrelative:kronos.machina.domain\\entities\\blobsanitizationhistoryentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5A1DC94-2645-4538-BFB1-8FEC13E645DA}|Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj|x:\\diploma\\project\\kronos.machina\\kronos.machina.infrastructure\\data\\repositories\\videodatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 420,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -87,8 +87,7 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAgAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-25T21:20:53.786Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -101,12 +100,24 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-28T19:15:19.944Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SignatureValidationBlobSanitizationJob.cs",
+              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\SignatureValidationBlobSanitizationJob.cs",
+              "RelativeDocumentMoniker": "Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\SignatureValidationBlobSanitizationJob.cs",
+              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\SignatureValidationBlobSanitizationJob.cs",
+              "RelativeToolTip": "Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\SignatureValidationBlobSanitizationJob.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T19:04:14.398Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "SanitizationStageResult.cs",
               "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Application\\Misc\\Sanitization\\SanitizationStageResult.cs",
               "RelativeDocumentMoniker": "Kronos.Machina.Application\\Misc\\Sanitization\\SanitizationStageResult.cs",
@@ -114,12 +125,11 @@
               "RelativeToolTip": "Kronos.Machina.Application\\Misc\\Sanitization\\SanitizationStageResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T22:36:39.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T22:36:39.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "IServiceCollectionExtensions.cs",
               "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Application\\Extensions\\IServiceCollectionExtensions.cs",
               "RelativeDocumentMoniker": "Kronos.Machina.Application\\Extensions\\IServiceCollectionExtensions.cs",
@@ -127,21 +137,7 @@
               "RelativeToolTip": "Kronos.Machina.Application\\Extensions\\IServiceCollectionExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T17:07:36.114Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SignatureValidationBlobSanitizationJob.cs",
-              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\SignatureValidationBlobSanitizationJob.cs",
-              "RelativeDocumentMoniker": "Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\SignatureValidationBlobSanitizationJob.cs",
-              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\SignatureValidationBlobSanitizationJob.cs",
-              "RelativeToolTip": "Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\SignatureValidationBlobSanitizationJob.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T19:04:14.398Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T17:07:36.114Z"
             },
             {
               "$type": "Document",
@@ -206,7 +202,7 @@
               "RelativeDocumentMoniker": "Kronos.Machina.Infrastructure\\Misc\\Sanitization\\BlobSanitizationOrchestrator.cs",
               "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Misc\\Sanitization\\BlobSanitizationOrchestrator.cs",
               "RelativeToolTip": "Kronos.Machina.Infrastructure\\Misc\\Sanitization\\BlobSanitizationOrchestrator.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAEwFoAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-28T20:34:14.716Z",
               "IsPinned": true,
@@ -214,7 +210,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "InvalidBlobDeletionJob.cs",
+              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\InvalidBlobDeletionJob.cs",
+              "RelativeDocumentMoniker": "Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\InvalidBlobDeletionJob.cs",
+              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\InvalidBlobDeletionJob.cs",
+              "RelativeToolTip": "Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\InvalidBlobDeletionJob.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T21:19:01.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "BlobSanitizationStageFactory.cs",
               "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Misc\\Sanitization\\BlobSanitizationStageFactory.cs",
               "RelativeDocumentMoniker": "Kronos.Machina.Infrastructure\\Misc\\Sanitization\\BlobSanitizationStageFactory.cs",
@@ -222,25 +231,11 @@
               "RelativeToolTip": "Kronos.Machina.Infrastructure\\Misc\\Sanitization\\BlobSanitizationStageFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T22:19:31.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T22:19:31.044Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InvalidBlobDeletionJob.cs",
-              "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\InvalidBlobDeletionJob.cs",
-              "RelativeDocumentMoniker": "Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\InvalidBlobDeletionJob.cs",
-              "ToolTip": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\InvalidBlobDeletionJob.cs",
-              "RelativeToolTip": "Kronos.Machina.Infrastructure\\Jobs\\Sanitization\\InvalidBlobDeletionJob.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAmwEsAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T21:19:01.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "BlobSanitizationHistoryEntry.cs",
               "DocumentMoniker": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Domain\\Entities\\BlobSanitizationHistoryEntry.cs",
               "RelativeDocumentMoniker": "Kronos.Machina.Domain\\Entities\\BlobSanitizationHistoryEntry.cs",
@@ -248,8 +243,7 @@
               "RelativeToolTip": "Kronos.Machina.Domain\\Entities\\BlobSanitizationHistoryEntry.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T17:40:40.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T17:40:40.059Z"
             },
             {
               "$type": "Document",
@@ -261,8 +255,7 @@
               "RelativeToolTip": "Kronos.Machina.Domain\\Entities\\SanitizationData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T17:40:12.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T17:40:12.247Z"
             },
             {
               "$type": "Document",
@@ -286,8 +279,7 @@
               "RelativeToolTip": "Kronos.Machina.Contracts\\Dto\\BlobDataDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T16:38:51.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T16:38:51.256Z"
             }
           ]
         }
