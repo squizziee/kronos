@@ -126,7 +126,7 @@ namespace Kronos.Machina.Infrastructure.Jobs.Sanitization
 
             foreach (var format in formats)
             {
-                if (CompareBytewise(header, format.Signature))
+                if (CompareBytewise(header, format.Signature, format.MandatorySignatureByteIndexes))
                 {
                     actualFormat = format;
                     break;
@@ -149,7 +149,8 @@ namespace Kronos.Machina.Infrastructure.Jobs.Sanitization
         /// <param name="formatSignature">Valid format signature.</param>
         /// <returns><c>True</c> if signature was found inside the provided header, <c>False</c>
         /// otherwise.</returns>
-        private static bool CompareBytewise(byte[] actualBytes, byte[] formatSignature)
+        private static bool CompareBytewise(byte[] actualBytes, byte[] formatSignature, 
+            int[] byteIndexesToCheck)
         {
             if (formatSignature.Length > actualBytes.Length)
             {
@@ -158,9 +159,9 @@ namespace Kronos.Machina.Infrastructure.Jobs.Sanitization
 
             int sum = 0;
 
-            for (int i = 0; i < formatSignature.Length; i++)
+            foreach (var byteIndex in byteIndexesToCheck)
             {
-                sum += actualBytes[i] - formatSignature[i];
+                sum += actualBytes[byteIndex] - formatSignature[byteIndex];
             }
 
             return sum == 0;

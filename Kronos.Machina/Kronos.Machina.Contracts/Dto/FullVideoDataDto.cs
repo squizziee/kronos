@@ -7,5 +7,7 @@
         public Guid? VideoFormatId { get; set; }
         public VideoFormatDto? VideoFormat { get; set; }
         public required ICollection<string> AvailableImageQuality { get; set; }
+        public required DateTimeOffset CreatedAt { get; set; }
+        public required DateTimeOffset LastUpdatedAt { get; set; }
     }
 }

@@ -146,11 +146,18 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
                 var stageConfig = _pipelineConfig.Stages
                     .SingleOrDefault
                     (
-                        s => s.Order == nextStageNumber
+                        s => s.Order == nextStageNumber + 1
                     );
 
                 if (stageConfig == null)
                 {
+                    stageResult.VideoData.UploadData.State = VideoUploadState.SanitizedBlob;
+                    stageResult.VideoData.UploadData.BlobData.SanitizationData
+                        .History.AddEntry("Sanitization done, ready for processing", true);
+
+                    _videoDataRepository.AttachModified(stageResult.VideoData);
+                    await _videoDataRepository.SaveChangesAsync(cancellationToken);
+
                     return;
                 }
 
