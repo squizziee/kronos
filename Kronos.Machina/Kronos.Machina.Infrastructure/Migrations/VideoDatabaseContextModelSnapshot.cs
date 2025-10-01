@@ -193,9 +193,42 @@ namespace Kronos.Machina.Infrastructure.Migrations
                                     b2.Property<Guid>("VideoUploadDataVideoDataId")
                                         .HasColumnType("TEXT");
 
+                                    b2.Property<int?>("AudioBitrate")
+                                        .HasColumnType("INTEGER");
+
+                                    b2.Property<string>("AudioChannels")
+                                        .HasColumnType("TEXT");
+
+                                    b2.Property<string>("AudioCodecName")
+                                        .HasColumnType("TEXT");
+
+                                    b2.Property<int?>("AudioSampleRate")
+                                        .HasColumnType("INTEGER");
+
+                                    b2.Property<int?>("BitDepth")
+                                        .HasColumnType("INTEGER");
+
                                     b2.Property<string>("BlobId")
                                         .IsRequired()
                                         .HasColumnType("TEXT");
+
+                                    b2.Property<TimeSpan?>("Duration")
+                                        .HasColumnType("TEXT");
+
+                                    b2.Property<double?>("FramesPerSecond")
+                                        .HasColumnType("REAL");
+
+                                    b2.Property<int?>("Height")
+                                        .HasColumnType("INTEGER");
+
+                                    b2.Property<int?>("VideoBitrate")
+                                        .HasColumnType("INTEGER");
+
+                                    b2.Property<string>("VideoCodecName")
+                                        .HasColumnType("TEXT");
+
+                                    b2.Property<int?>("Width")
+                                        .HasColumnType("INTEGER");
 
                                     b2.HasKey("VideoUploadDataVideoDataId");
 

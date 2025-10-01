@@ -8,6 +8,8 @@
 
   <ItemGroup>
 	<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	<PackageReference Include="FFMpegCore" Version="5.2.0" />
+	<PackageReference Include="Mapster" Version="7.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.3.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.8" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.8" />

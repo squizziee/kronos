@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration.AddJsonFile("Settings/SanitizerSettings.json", false);
 builder.Configuration.AddJsonFile("Settings/VideoStorageSettings.json", false);
+builder.Configuration.AddJsonFile("Settings/FFmpegConfig.json", false);
 
 builder.Services.AddBackgroundJobProvider();
 builder.Services.AddApplication();

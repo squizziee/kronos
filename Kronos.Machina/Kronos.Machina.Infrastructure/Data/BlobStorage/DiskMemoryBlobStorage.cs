@@ -165,5 +165,30 @@ namespace Kronos.Machina.Infrastructure.Data.BlobStorage
             await RemoveBlobFromStorageAsync(blobIdentifier, cancellationToken);
             await AddBlobToStorageInternalAsync(blobIdentifier, newBlobData, cancellationToken);
         }
+
+        public string GetAbsolutePath(IBlobIdentifier blobIdentifier)
+        {
+            var pathOne = Path.Combine
+            (
+                _environment.ContentRootPath,
+                _unsanitizedBlobZoneInfo.BlobPath.Replace('/', Path.DirectorySeparatorChar),
+                blobIdentifier.GetStorageName()
+            );
+
+            var pathTwo = Path.Combine
+            (
+                _environment.ContentRootPath,
+                _sanitizedBlobZoneInfo.BlobPath.Replace('/', Path.DirectorySeparatorChar),
+                blobIdentifier.GetStorageName()
+            );
+
+            if (File.Exists(pathOne))
+            {
+                return pathOne;
+            } else
+            {
+                return pathTwo;
+            }
+        }
     }
 }

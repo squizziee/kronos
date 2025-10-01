@@ -5,6 +5,11 @@
         "Id": "SignatureValidation",
         "Order": 0,
         "Args": {}
+      },
+      {
+        "Id": "ProbeValidation",
+        "Order": 1,
+        "Args":  {}
       }
     ]
   }

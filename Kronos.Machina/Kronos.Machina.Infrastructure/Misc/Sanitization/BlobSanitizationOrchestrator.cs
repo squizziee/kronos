@@ -146,7 +146,7 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
                 var stageConfig = _pipelineConfig.Stages
                     .SingleOrDefault
                     (
-                        s => s.Order == nextStageNumber + 1
+                        s => s.Order == nextStageNumber
                     );
 
                 if (stageConfig == null)
@@ -178,7 +178,7 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
                     await scheduler.ScheduleJob(job, trigger, cancellationToken);
 
                     _logger.LogInformation("#{num} stage of sanitizaion for VideoData {id} has begun",
-                        nextStageNumber, stageResult.VideoData.Id);
+                        nextStageNumber + 1, stageResult.VideoData.Id);
 
                     stageResult.VideoData.UploadData.BlobData.SanitizationData.NextStageNumber += 1;
                     _videoDataRepository.AttachModified(stageResult.VideoData);

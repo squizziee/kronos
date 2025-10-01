@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "bjWmRf2zAF0=",
+  "dgSpecHash": "vouOKdzpjDs=",
   "success": true,
   "projectFilePath": "X:\\Diploma\\Project\\Kronos.Machina\\Kronos.Machina.Infrastructure\\Kronos.Machina.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\automapper\\15.0.1\\automapper.15.0.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\ffmpegcore\\5.2.0\\ffmpegcore.5.2.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\instances\\3.0.1\\instances.3.0.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.3.0\\microsoft.aspnetcore.hosting.abstractions.2.3.0.nupkg.sha512",

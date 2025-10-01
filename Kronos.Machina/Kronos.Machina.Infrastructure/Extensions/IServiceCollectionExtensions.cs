@@ -5,6 +5,7 @@ using Kronos.Machina.Infrastructure.ConfigOptions;
 using Kronos.Machina.Infrastructure.Data;
 using Kronos.Machina.Infrastructure.Data.BlobStorage;
 using Kronos.Machina.Infrastructure.Data.Repositories;
+using Kronos.Machina.Infrastructure.Misc.Probing;
 using Kronos.Machina.Infrastructure.Misc.Sanitization;
 using Kronos.Machina.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,8 @@ namespace Kronos.Machina.Infrastructure.Extensions
             services.AddScoped<IBlobStorage, DiskMemoryBlobStorage>();
             services.AddScoped<IBlobSanitizationOrchestrator, BlobSanitizationOrchestrator>();
 
+            services.AddScoped<IProbeAccessor, FFprobeAccessor>();
+
             services.AddScoped<IVideoDataRepository, VideoDataRepository>();
             services.AddScoped<IVideoFormatRepository, VideoFormatRepository>();
             services.AddScoped<BlobSanitizationStageFactory>();
@@ -29,6 +32,7 @@ namespace Kronos.Machina.Infrastructure.Extensions
             services.Configure<SanitizedBlobZoneInfo>(configuration.GetSection("SanitizedZone"));
             services.Configure<UnsanitizedBlobZoneInfo>(configuration.GetSection("UnsanitizedZone"));
             services.Configure<PipelineConfig>(configuration.GetSection("Pipeline"));
+            services.Configure<FFmpegConfig>(configuration.GetSection("FFExecutables"));
 
             return services;
         }

@@ -1,0 +1,6 @@
+{
+  "FFExecutables": {
+    "ProbePath": "C:/ffmpeg/bin/ffprobe.exe",
+    "EncoderPath": "C:/ffmpeg/bin/ffmpeg.exe"
+  }
+}

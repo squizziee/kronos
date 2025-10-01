@@ -8,13 +8,17 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
         {
             return id switch
             {
-                "SignatureValidation" => new BlobSanitizationStage() 
+                "SignatureValidation" => new () 
                 { 
                     StageType = typeof(SignatureValidationBlobSanitizationJob)
                 },
-                "InvalidBlob" => new BlobSanitizationStage()
+                "InvalidBlob" => new ()
                 {
                     StageType = typeof(InvalidBlobDeletionJob)
+                },
+                "ProbeValidation" => new ()
+                {
+                    StageType = typeof(ProbeAnalysisBlobSanitizationJob)
                 },
                 _ => throw new Exception("aaaa"),// TODO
             };
