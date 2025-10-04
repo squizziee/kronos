@@ -1,5 +1,10 @@
 ﻿namespace Kronos.Machina.Domain.Entities
 {
+    /// <summary>
+    /// Stores all technical data about the video blob (original 
+    /// file uploaded by the video author). Includes video and audio channel
+    /// info.
+    /// </summary>
     public class BlobData
     {
         public string BlobId { get; set; } = string.Empty;

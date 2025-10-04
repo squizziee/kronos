@@ -7,7 +7,7 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
     {
         public required Type StageType { get; set; }
 
-        public (IJobDetail job, ITrigger trigger) GetExucatables(string jobId, (string, string) jobArgs)
+        public (IJobDetail job, ITrigger trigger) GetExecutables(string jobId, (string, string) jobArgs)
         {
             var job = JobBuilder.Create(StageType)
                 .WithIdentity(jobId)

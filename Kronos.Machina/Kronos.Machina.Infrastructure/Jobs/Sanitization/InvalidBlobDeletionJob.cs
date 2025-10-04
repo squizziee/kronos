@@ -73,7 +73,7 @@ namespace Kronos.Machina.Infrastructure.Jobs.Sanitization
                         VideoData = videoData,
                         StageType = this.GetType(),
                         IsTerminal = true,
-                        IsInvalidStateResolutionStage = true,
+                        IsInvalidStateConsequenceStage = true,
                     }
                 );
             }

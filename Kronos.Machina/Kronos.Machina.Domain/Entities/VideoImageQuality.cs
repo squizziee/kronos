@@ -1,5 +1,9 @@
 ﻿namespace Kronos.Machina.Domain.Entities
 {
+    /// <summary>
+    /// All qualities that are supposed to be supported
+    /// by Kronos.
+    /// </summary>
     public enum VideoImageQuality
     {
         ULD_144p,

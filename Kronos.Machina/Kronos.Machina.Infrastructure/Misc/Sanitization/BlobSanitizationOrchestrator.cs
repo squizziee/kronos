@@ -2,7 +2,6 @@
 using Kronos.Machina.Domain.Entities;
 using Kronos.Machina.Domain.Repositories;
 using Kronos.Machina.Infrastructure.ConfigOptions;
-using Kronos.Machina.Infrastructure.Jobs.Sanitization;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Quartz;
@@ -41,25 +40,35 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
 
             var scheduler = await _schedulerFactory.GetScheduler(cancellationToken);
 
-            _logger.LogInformation("Initializing sanitizaion cycle for VideoData {id}...", videoData.Id);
+            _logger.LogInformation("Initializing sanitizaion cycle for VideoData {id}...", 
+                videoData.Id);
 
-            var stageId = _pipelineConfig.Stages
-                .Single(s => s.Order == 0).Id;
-
-            var stage = _stageFactory.GetStageInstance(stageId);
+            var stageId = _pipelineConfig
+                .Stages
+                .Single(s => s.Order == 0)
+                .Id;
 
             var jobId = $"{stageId}-{videoData.Id}";
 
-            (var job, var trigger) = stage
-                .GetExucatables(jobId, ("VideoDataId", videoData.Id.ToString()));
-
+            (var job, var trigger) = _stageFactory
+                .GetStageInstance(stageId)
+                .GetExecutables
+                (
+                    jobId, 
+                    (
+                        "VideoDataId", 
+                        videoData.Id.ToString()
+                    )
+                
+                );
 
             try
             {
                 await scheduler.ScheduleJob(job, trigger, cancellationToken);
 
                 _logger.LogInformation("Initialization success for VideoData {id}", videoData.Id);
-                _logger.LogInformation("First stage of sanitizaion for VideoData {id} has begun", videoData.Id);
+                _logger.LogInformation("First stage of sanitizaion for VideoData {id} has begun", 
+                    videoData.Id);
 
                 videoData.UploadData.BlobData.SanitizationData.NextStageNumber += 1;
                 _videoDataRepository.AttachModified(videoData);
@@ -75,11 +84,20 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
         public async Task RequestActionAsync(SanitizationStageResult stageResult,
             CancellationToken cancellationToken = default)
         {
-            if (stageResult.IsTerminal && !stageResult.IsInvalidStateResolutionStage)
+            if (stageResult.IsTerminal && !stageResult.IsInvalidStateConsequenceStage)
             {
-                stageResult.VideoData.UploadData.State = VideoUploadState.SanitizedBlob;
-                stageResult.VideoData.UploadData.BlobData.SanitizationData
-                    .History.AddEntry("Sanitization done, ready for processing", true);
+                stageResult
+                    .VideoData
+                    .UploadData
+                    .State = VideoUploadState.SanitizedBlob;
+
+                stageResult
+                    .VideoData
+                    .UploadData
+                    .BlobData
+                    .SanitizationData
+                    .History
+                    .AddEntry("Sanitization done, ready for processing", true);
 
                 _videoDataRepository.AttachModified(stageResult.VideoData);
                 await _videoDataRepository.SaveChangesAsync(cancellationToken);
@@ -88,11 +106,20 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
             }
 
 
-            if (stageResult.IsInvalidStateResolutionStage)
+            if (stageResult.IsInvalidStateConsequenceStage)
             {
-                stageResult.VideoData.UploadData.State = VideoUploadState.Invalid;
-                stageResult.VideoData.UploadData.BlobData.SanitizationData
-                    .History.AddEntry("Sanitization interrupted, invalid file", false);
+                stageResult
+                    .VideoData
+                    .UploadData
+                    .State = VideoUploadState.Invalid;
+
+                stageResult
+                    .VideoData
+                    .UploadData
+                    .BlobData
+                    .SanitizationData
+                    .History
+                    .AddEntry("Sanitization interrupted, invalid file", false);
 
                 _videoDataRepository.AttachModified(stageResult.VideoData);
                 await _videoDataRepository.SaveChangesAsync(cancellationToken);
@@ -104,13 +131,11 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
             if (!stageResult.IsSuccessful)
             {
                 var stageId = "InvalidBlob";
-
-                var stage = _stageFactory.GetStageInstance(stageId);
-
                 var jobId = $"{stageId}-{stageResult.VideoData.Id}";
 
-                (var job, var trigger) = stage
-                    .GetExucatables(jobId, ("VideoDataId", stageResult.VideoData.Id.ToString()));
+                (var job, var trigger) = _stageFactory
+                    .GetStageInstance(stageId)
+                    .GetExecutables(jobId, ("VideoDataId", stageResult.VideoData.Id.ToString()));
 
                 try
                 {
@@ -124,7 +149,13 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
                     _logger.LogInformation("Processing for invalid blob for VideoData {id} launch success",
                         stageResult.VideoData.Id);
 
-                    stageResult.VideoData.UploadData.BlobData.SanitizationData.NextStageNumber += 1;
+                    stageResult
+                        .VideoData
+                        .UploadData
+                        .BlobData
+                        .SanitizationData
+                        .NextStageNumber += 1;
+
                     _videoDataRepository.AttachModified(stageResult.VideoData);
                     await _videoDataRepository.SaveChangesAsync(cancellationToken);
                 }
@@ -149,11 +180,22 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
                         s => s.Order == nextStageNumber
                     );
 
+
+                // null means end of pipeline
                 if (stageConfig == null)
                 {
-                    stageResult.VideoData.UploadData.State = VideoUploadState.SanitizedBlob;
-                    stageResult.VideoData.UploadData.BlobData.SanitizationData
-                        .History.AddEntry("Sanitization done, ready for processing", true);
+                    stageResult
+                        .VideoData
+                        .UploadData
+                        .State = VideoUploadState.SanitizedBlob;
+
+                    stageResult
+                        .VideoData
+                        .UploadData
+                        .BlobData
+                        .SanitizationData
+                        .History
+                        .AddEntry("Sanitization done, ready for processing", true);
 
                     _videoDataRepository.AttachModified(stageResult.VideoData);
                     await _videoDataRepository.SaveChangesAsync(cancellationToken);
@@ -161,12 +203,19 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
                     return;
                 }
 
-                var stage = _stageFactory.GetStageInstance(stageConfig.Id);
 
                 var jobId = $"{stageConfig.Id}-{stageResult.VideoData.Id}";
 
-                (var job, var trigger) = stage
-                    .GetExucatables(jobId, ("VideoDataId", stageResult.VideoData.Id.ToString()));
+                (var job, var trigger) = _stageFactory
+                    .GetStageInstance(stageConfig.Id)
+                    .GetExecutables
+                    (
+                        jobId, 
+                        (
+                            "VideoDataId", 
+                            stageResult.VideoData.Id.ToString()
+                         )
+                    );
 
                 try
                 {
@@ -180,7 +229,13 @@ namespace Kronos.Machina.Infrastructure.Misc.Sanitization
                     _logger.LogInformation("#{num} stage of sanitizaion for VideoData {id} has begun",
                         nextStageNumber + 1, stageResult.VideoData.Id);
 
-                    stageResult.VideoData.UploadData.BlobData.SanitizationData.NextStageNumber += 1;
+                    stageResult
+                        .VideoData
+                        .UploadData
+                        .BlobData
+                        .SanitizationData
+                        .NextStageNumber += 1;
+
                     _videoDataRepository.AttachModified(stageResult.VideoData);
                     await _videoDataRepository.SaveChangesAsync(cancellationToken);
                 }
